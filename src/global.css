@@ -15,7 +15,7 @@
 .font-text{
   font-family: Urbanist;
 }
-canvas {
+.canvas1 {
     width: 100vw;
     height: 100vh;
     display: block;
