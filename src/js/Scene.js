@@ -7,22 +7,24 @@ const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerH
 const renderer = new THREE.WebGLRenderer();
 let mouse = new THREE.Vector2();
 
+let animationScripts = [];
+let scrollPercent = 0;
+
 const colors = [new THREE.Color(0xffffff), new THREE.Color(0xffe799)];
 const geometry = new THREE.BoxGeometry(1, 1, 1);
 const material = new THREE.MeshBasicMaterial({ color: colors[1] });
 const cube = new THREE.Mesh(geometry, material);
 
-let c = {
-  scrollDist: 5,
-  scrollPos: 0,
-};
 
-loadSVG("./assets/layer1.svg");
+for(let i = 0;i<5;i++){
+  loadSVG(`./assets/layer${i%3}.svg`,5+3*i);
+}
+
 
 initial();
 function initial() {
-  camera.position.z = 5;
-  scene.add(cube);
+  camera.position.z = 0;
+  //scene.add(cube);
   scene.background = colors[0];
 
   renderer.setSize(window.innerWidth, window.innerHeight);
@@ -33,32 +35,41 @@ function initial() {
 
 function animate() {
   requestAnimationFrame(animate);
-  scrollUpdate();
-  renderer.render(scene, camera);
+  playScrollAnimations();
+  cameraMovement()
+  render();
   cube.rotation.y += 0.01;
 }
+
+function render() {
+  renderer.render(scene, camera);
+}
+
 animate();
 
-function scrollUpdate() {
-  window.addEventListener("wheel", onMouseWheel);
-  if (c.scrollDist < 18 && c.scrollPos > 0) {
-    c.scrollDist += c.scrollPos;
-  } else if (c.scrollDist > -1000 && c.scrollPos < 0) {
-    c.scrollDist += c.scrollPos;
-  }
-  c.scrollPos *= 0.93;
-  cameraMovement();
+function lerp(x, y, a) {
+  return (1 - a) * x + a * y;
 }
+function scalePercent(start, end) {
+  return (scrollPercent - start) / (end - start);
+}
+
+function playScrollAnimations() {
+  animationScripts.forEach((a) => {
+    if (scrollPercent >= a.start && scrollPercent < a.end) {
+      a.func();
+    }
+  });
+}
+
 function cameraMovement() {
-  let z = c.scrollDist / 2 + 4;
+  let z = -scrollPercent / 5 + 5;
   camera.rotation.x = mouse.y / 24;
   camera.rotation.y = -mouse.x / 12;
 
   camera.position.z = z;
 }
-function onMouseWheel(event) {
-  c.scrollPos = -0.001 * event.deltaY;
-}
+
 function onDocumentMouseMove(event) {
   event.preventDefault();
   mouse.x = (event.clientX / window.innerWidth) * 2 - 1;
@@ -72,6 +83,9 @@ function onWindowResize() {
   camera.updateProjectionMatrix();
   renderer.setSize(width, height);
 }
-function addScroll() {
-  c.scrollDist -= 3;
-}
+document.body.onscroll = () => {
+  scrollPercent =
+    ((document.documentElement.scrollTop || document.body.scrollTop) /
+      ((document.documentElement.scrollHeight || document.body.scrollHeight) - document.documentElement.clientHeight)) *
+    100;
+};

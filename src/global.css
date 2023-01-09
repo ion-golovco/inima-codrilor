@@ -1,26 +1,28 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,600;1,400&family=Unbounded:wght@200;300;400;500;600;700;900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Urbanist:wght@300;400;500&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,600;1,400&family=Unbounded:wght@200;300;400;500;600;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Urbanist:wght@300;400;500&display=swap");
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-*{
+* {
   scroll-behavior: smooth;
+  --tw-text-opacity: 1;
+  color: rgb(11 9 11 / var(--tw-text-opacity));
 }
 
-.font-display{
+.font-display {
   font-family: Unbounded;
 }
-.font-text{
+.font-text {
   font-family: Urbanist;
 }
 canvas {
-    width: 100vw;
-    height: 100vh;
-    display: block;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: -9999;
-  }
+  width: 100vw;
+  height: 100vh;
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -9999;
+}
