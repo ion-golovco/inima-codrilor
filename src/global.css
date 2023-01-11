@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,600;1,400&family=Unbounded:wght@200;300;400;500;600;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Unbounded:wght@200;300;400;500;600;700;900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Urbanist:wght@300;400;500&display=swap");
 
 @tailwind base;
@@ -9,6 +9,10 @@
   scroll-behavior: smooth;
   --tw-text-opacity: 1;
   color: rgb(11 9 11 / var(--tw-text-opacity));
+}
+body{
+  margin:0;
+  padding: 0;
 }
 
 .font-display {

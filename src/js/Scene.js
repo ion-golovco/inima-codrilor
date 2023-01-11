@@ -16,8 +16,8 @@ const material = new THREE.MeshBasicMaterial({ color: colors[1] });
 const cube = new THREE.Mesh(geometry, material);
 
 
-for(let i = 0;i<5;i++){
-  loadSVG(`./assets/layer${i%3}.svg`,5+3*i);
+for(let i = 0;i<2;i++){
+  loadSVG(`./assets/layer${i%4}.svg`,5+7*i);
 }
 
 
@@ -63,7 +63,7 @@ function playScrollAnimations() {
 }
 
 function cameraMovement() {
-  let z = -scrollPercent / 5 + 5;
+  let z = -scrollPercent + 5;
   camera.rotation.x = mouse.y / 24;
   camera.rotation.y = -mouse.x / 12;
 

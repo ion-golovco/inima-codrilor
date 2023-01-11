@@ -54,7 +54,6 @@ function loadSVG(url, z) {
     group.position.x = -683 * scale;
     group.position.y = 384 * scale;
     group.position.z = -z;
-    console.log(group);
     scene.add(group);
   });
 }

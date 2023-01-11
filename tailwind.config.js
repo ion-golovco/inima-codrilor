@@ -5,8 +5,9 @@ module.exports = {
         transparent:'transparent',
         black:'#0B090B',
         primary:'#43C59E',
-        back:'#FFE799',
-        white:'#ffffff'
+        back:'#F57E29',
+        white:'#ffffff',
+        red:'#AF1B3F'
     }
   }
 }
