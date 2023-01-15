@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Unbounded:wght@200;300;400;500;600;700;900&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Urbanist:wght@300;400;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap");
 
 @tailwind base;
 @tailwind components;
@@ -8,7 +8,8 @@
 * {
   scroll-behavior: smooth;
   --tw-text-opacity: 1;
-  color: rgb(11 9 11 / var(--tw-text-opacity));
+  color: inherit;
+
 }
 body{
   margin:0;
@@ -19,7 +20,7 @@ body{
   font-family: Unbounded;
 }
 .font-text {
-  font-family: Urbanist;
+  font-family: Montserrat;
 }
 canvas {
   width: 100vw;
