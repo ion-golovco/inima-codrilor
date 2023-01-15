@@ -4,10 +4,10 @@ module.exports = {
       colors: {
         transparent:'transparent',
         black:'#0B090B',
-        primary:'#43C59E',
-        back:'#F57E29',
+        primary:'#367E18',
+        back:'#F7B71D',
         white:'#ffffff',
-        red:'#AF1B3F'
+        red:'#CC3636'
     }
   }
 }
