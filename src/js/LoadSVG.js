@@ -14,7 +14,7 @@ function loadSVG(url, z) {
       const path = paths[i];
       const fillColor = path.userData.style.fill;
       if (fillColor !== undefined && fillColor !== "none") {
-        const material = new THREE.MeshBasicMaterial({
+        const material = new THREE.MeshStandardMaterial({
           color: new THREE.Color().setStyle(fillColor),
           opacity: path.userData.style.fillOpacity,
           transparent: true,
@@ -33,7 +33,7 @@ function loadSVG(url, z) {
       }
       const strokeColor = path.userData.style.stroke;
       if (strokeColor !== undefined && strokeColor !== "none") {
-        const material = new THREE.MeshBasicMaterial({
+        const material = new THREE.MeshStandardMaterial({
           color: new THREE.Color().setStyle(strokeColor),
           opacity: path.userData.style.strokeOpacity,
           transparent: true,

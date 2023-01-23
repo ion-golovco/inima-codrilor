@@ -16,8 +16,8 @@ const material = new THREE.MeshBasicMaterial({ color: colors[1] });
 const cube = new THREE.Mesh(geometry, material);
 
 
-for(let i = 0;i<2;i++){
-  loadSVG(`./assets/layer${i%4}.svg`,5+7*i);
+for(let i = 0;i<4;i++){
+  loadSVG(`./assets/layer${i}.svg`,20+8*i);
 }
 
 
@@ -32,6 +32,9 @@ function initial() {
   window.addEventListener("resize", onWindowResize);
   document.addEventListener("mousemove", onDocumentMouseMove, false);
 }
+
+const light = new THREE.AmbientLight( 0xffffff );
+scene.add( light );
 
 function animate() {
   requestAnimationFrame(animate);
@@ -63,10 +66,10 @@ function playScrollAnimations() {
 }
 
 function cameraMovement() {
-  let z = -scrollPercent + 5;
-  camera.rotation.x = mouse.y / 24;
-  camera.rotation.y = -mouse.x / 12;
-
+  let z = -scrollPercent*2;
+  //camera.rotation.x = mouse.y / 24;
+  //camera.rotation.y = -mouse.x / 12;
+  
   camera.position.z = z;
 }
 
