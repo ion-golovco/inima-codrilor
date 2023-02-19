@@ -3,11 +3,11 @@ module.exports = {
     theme: {
       colors: {
         transparent:'transparent',
-        black:'#0B090B',
-        primary:'#367E18',
-        back:'#F7B71D',
+        black:'#010400',
+        primary:'#A7C892',
+        back:'#FAD275',
         white:'#ffffff',
-        red:'#CC3636'
+        red:'#F2BCAA'
     }
   }
 }

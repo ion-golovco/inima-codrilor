@@ -4,27 +4,29 @@ import loadSVG from "./LoadSVG.js";
 
 export const scene = new THREE.Scene();
 const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
-const renderer = new THREE.WebGLRenderer();
+
+const renderer = new THREE.WebGLRenderer({ antialias: true });
 let mouse = new THREE.Vector2();
 
 let animationScripts = [];
 let scrollPercent = 0;
 
 const colors = [new THREE.Color(0xffffff), new THREE.Color(0xffe799)];
-const geometry = new THREE.BoxGeometry(1, 1, 1);
-const material = new THREE.MeshBasicMaterial({ color: colors[1] });
-const cube = new THREE.Mesh(geometry, material);
 
+let geometry = new THREE.PlaneGeometry( 250, 250 );
+let material = new THREE.MeshBasicMaterial( {color: 0xBAD4AA, transparent:true} );
+const cortina = new THREE.Mesh( geometry, material );
+cortina.position.z = -10
+cortina.rotation.z = Math.PI / 2
 
-for(let i = 0;i<4;i++){
-  loadSVG(`./assets/layer${i}.svg`,20+8*i);
+for (let i = 0; i < 3; i++) {
+  loadSVG(`./assets/layer${i}.svg`, 12 + 8 * i);
 }
-
 
 initial();
 function initial() {
-  camera.position.z = 0;
-  //scene.add(cube);
+  
+  scene.add( cortina );
   scene.background = colors[0];
 
   renderer.setSize(window.innerWidth, window.innerHeight);
@@ -33,15 +35,14 @@ function initial() {
   document.addEventListener("mousemove", onDocumentMouseMove, false);
 }
 
-const light = new THREE.AmbientLight( 0xffffff );
-scene.add( light );
+const light = new THREE.AmbientLight(0xffffff);
+scene.add(light);
 
 function animate() {
   requestAnimationFrame(animate);
   playScrollAnimations();
-  cameraMovement()
+  cameraMovement();
   render();
-  cube.rotation.y += 0.01;
 }
 
 function render() {
@@ -64,13 +65,34 @@ function playScrollAnimations() {
     }
   });
 }
+animationScripts.push({
+  start: 0,
+  end: 1,
+  func: () => {
+    camera.position.y = lerp(0, -5, scalePercent(0, 1));
+  },
+});
+animationScripts.push({
+  start: 1,
+  end: 20,
+  func: () => {
+    cortina.material.opacity = lerp(1, 0, scalePercent(1, 20));; 
+    camera.position.y = lerp(-5, 0, scalePercent(1, 20));
+  },
+});
+animationScripts.push({
+  start: 1,
+  end: 50,
+  func: () => {
+    camera.position.z = lerp(0, -50, scalePercent(10,60));
+  },
+});
 
 function cameraMovement() {
-  let z = -scrollPercent*2;
+  //let z = -scrollPercent;
   //camera.rotation.x = mouse.y / 24;
   //camera.rotation.y = -mouse.x / 12;
-  
-  camera.position.z = z;
+  //camera.position.z = z;
 }
 
 function onDocumentMouseMove(event) {
@@ -79,12 +101,19 @@ function onDocumentMouseMove(event) {
   mouse.y = -(event.clientY / window.innerHeight) * 2 + 1;
 }
 
+const resizeUpdateInterval = 300;
+let timesRezized = 0
 function onWindowResize() {
-  const width = window.innerWidth;
-  const height = window.innerHeight;
-  camera.aspect = width / height;
-  camera.updateProjectionMatrix();
-  renderer.setSize(width, height);
+  setTimeout(() => {
+    const width = window.innerWidth;
+    const height = window.innerHeight;
+    camera.aspect = width / height;
+    if (camera.aspect > 0.6 || timesRezized == 0) {
+      camera.updateProjectionMatrix();
+      renderer.setSize(width, height);
+      timesRezized++
+    }
+  }, resizeUpdateInterval);
 }
 document.body.onscroll = () => {
   scrollPercent =

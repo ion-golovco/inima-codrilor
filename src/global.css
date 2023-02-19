@@ -5,6 +5,18 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer components {
+  .responsive {
+    @apply mx-auto w-full max-w-[1512px] xl:px-[150px];
+  }
+  .text{
+    @apply md:text-2xl text-lg md:px-4 px-2
+  }
+  .heading{
+    @apply md:text-5xl text-4xl md:px-4 px-2 font-display
+  }
+}
+
 * {
   scroll-behavior: smooth;
   --tw-text-opacity: 1;
