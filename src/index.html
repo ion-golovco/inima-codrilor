@@ -7,6 +7,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@200;300;400;500;600;700;900&display=swap"
     rel="stylesheet" />
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <script src="./js/eventListener.js"></script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="output.css" />
   <link rel="icon" href="https://i.imgur.com/6UUbkL0.png">
@@ -26,30 +27,54 @@
       <p class="text-[2rem]">Te așteptăm în</p>
       <div class="md:text-[8rem] text-[5rem] leading-none font-display">Inima
         codrilor</div>
-      <a class="hover:scale-125 transition text-[2rem]" href="#aaa">↓ Intră ↓
+      <a class="hover:scale-125 transition text-[2rem]" href="#hello">↓ Intră ↓
       </a>
     </div>
 
-
-
     <main class="bg-white">
-      <header id="aaa" class="relative text-xl justify-center flex mt-[1000px]
-          text-white">
-        <div class="justify-center flex gap-6 z-50 border-white border-b-4
-            px-2">
-          <a class="py-4 md:block hidden hover:text-primary" href="./servicii.html">Servicii</a>
-          <a class="py-4 md:block hidden hover:text-primary" href="./despre-noi.html">Despre noi</a>
-          <div class="py-3 text-3xl font-display flex flex-row">
-            <a href="/">Inima Codrilor</a>
+
+      <header id="hello" class="relative text-xl justify-start md:justify-center flex mt-[1000px] text-white">
+        <div class="md:block hidden z-50">
+          <div class="justify-center flex gap-6  border-white border-b-4 px-2">
+            <a class="py-4  hover:text-primary" href="./servicii.html">Servicii</a>
+            <a class="py-4 hover:text-primary" href="./despre-noi.html">Despre noi</a>
+            <div class="py-3 text-3xl font-display flex flex-row ">
+              <a href="/#hello">Inima Codrilor</a>
+            </div>
+            <a class="py-4  hover:text-primary" href="./evenimente.html">Evenimente</a>
+            <a class="py-4  hover:text-primary" href="./contact.html">Contacte</a>
           </div>
-          <a class="py-4 md:block hidden hover:text-primary" href="./evenimente.html">Evenimente</a>
-          <a class="py-4 md:block hidden hover:text-primary" href="./contact.html">Contacte</a>
+        </div>
+        <div class="block md:hidden z-40 w-full">
+          <div class=" border-white border-b-4 flex flex-row justify-end">
+            <a class="py-3 text-3xl font-display w-full text-center absolute">
+              Inima Codrilor
+            </a>
+            <button id="hamburger-button" class="text-3xl py-3 px-4 cursor-pointer z-50">&#9776;</button>
+          </div>
+        </div>
+        <div id="mobile-menu" class="fixed h-screen top-0 w-full bg-white z-[60] border-black hidden border-b-4">
+          <div class="flex w-full flex-col gap-4 text-center text-black ">
+            <div class="border-primary border-b-4 flex flex-row justify-end">
+              <a class="py-3 text-3xl font-display w-full text-center absolute">
+                Inima Codrilor
+              </a>
+              <button id="hamburger-button" class="text-6xl px-3 cursor-pointer z-50">&times;</button>
+            </div>
+            <a class="text-3xl text hover:text-primary mt-8" href="./servicii.html">Servicii</a>
+            <a class="text-3xl text hover:text-primary" href="./despre-noi.html">Despre noi</a>
+            <a class="text-3xl text hover:text-primary" href="./evenimente.html">Evenimente</a>
+            <a class="text-3xl text hover:text-primary" href="./contact.html">Contacte</a>
+          </div>
         </div>
         <img class="absolute object-cover w-full h-[90vh] brightness-[60%]
             top-0 z-0"
           src="https://images.unsplash.com/photo-1593393360397-7338a836b0a8?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1332&q=80"
           alt="Orheiul vechi">
       </header>
+
+
+
 
 
 
@@ -60,10 +85,10 @@
           <p class="heading font-bold leading-snug md:text-left
               text-center w-full md:w-3/5"> Scăpați de oraș și relaxați-vă în
             pădure</p>
-          <p class="text mt-2">Inima codrilor te așteaptă.</p>
+          <p class="text mt-2"><span class="font-bold"> Inima codrilor</span> te așteaptă.</p>
           <a href="/contact.html" class="text-2xl md:mx-4 mx-2 md:mt-6 text-center
               text font-bold mt-12
-              border-[3px] py-1 rounded border-white w-60 cursor-pointer
+              border-[3px] py-1 rounded-2xl border-white w-60 cursor-pointer
               transition hover:scale-110">Rezervă
             acum
           </a>
@@ -85,15 +110,15 @@
             avea o <span class="font-bold"> experiență de neuitat.</span>
           </div>
         </div>
-        <div class="flex justify-center mt-8">
+        <div class="flex justify-center mt-8 ">
           <a href="/contact.html" class="text md:mx-4 mx-2 mt-6 text-center
               font-bold w-60
-              cursor-pointer border-[3px] rounded border-black py-1
+              cursor-pointer border-[3px] rounded-2xl border-black py-1
               transition hover:scale-110">Află
             despre noi</a>
           <a href="/contact.html" class="text md:mx-4 mx-2 mt-6 text-center
               font-bold bg-black
-              text-white rounded w-60 cursor-pointer py-1 transition
+              text-white rounded-2xl w-60 cursor-pointer py-1 transition
               hover:scale-110">Rezervă
             acum</a>
         </div>
@@ -125,13 +150,12 @@
       <div class="responsive mt-40 md:text-left">
         <div class="heading">Ce îți oferim?</div>
         <div class="text mt-8">
-          Noi combinăm frumusețea naturii cu comfortul modernului, vă punem
-          la dispoziție toate condițiile pentru a
-          avea o <span class="font-bold"> experiență de neuitat.</span>
+          Vă oferim cadrul ideal pentru a vă relaxa și a vă bucura de ședere, înconjurat de
+          splendoarea naturii și îmbunătățit cu <span class="font-bold">facilități moderne.</span>
         </div>
         <div class="flex md:flex-row flex-col md:gap-8 gap-4 justify-between mt-8">
 
-          <a class="cursor-pointer border-b-[6px] border-red
+          <a href="./servicii.html/#cazare" class="cursor-pointer border-b-[6px] border-red
              mx-2 md:mx-0">
             <div class="relative">
               <div class="absolute top-44 h-20 text-white w-full bg-black text-center
@@ -144,7 +168,7 @@
             </div>
           </a>
 
-          <a class="cursor-pointer border-b-[6px] border-red
+          <a href="./servicii.html/#spatii" class="cursor-pointer border-b-[6px] border-red
               mx-2 md:mx-0">
             <div class="relative">
               <div class="absolute top-44 h-20 text-white w-full bg-black text-center
@@ -152,12 +176,12 @@
                 <p class="font-bold text-3xl">Spații </p>
                 <p class="text-xl">De la 200 MDL / 2 ore</p>
               </div>
-              <img class="object-cover h-64 w-full" src="https://ivancea.moldtelecom.md/images/DSC_6213.jpg"
+              <img class="object-cover h-64 w-full" src="https://ivancea.moldtelecom.md/images/conference3.jpg"
                 alt="Orheiul vechi">
             </div>
           </a>
 
-          <a class="cursor-pointer border-b-[6px] border-red rounded
+          <a href="./servicii.html/#recreatie" class="cursor-pointer border-b-[6px] border-red rounded
                mx-2 md:mx-0">
             <div class="relative">
               <div class="absolute top-44 h-20 text-white w-full bg-black text-center
@@ -165,7 +189,7 @@
                 <p class="font-bold text-3xl">Recreație</p>
                 <p class="text-xl">De la 600 MDL / 12 ore</p>
               </div>
-              <img class="object-cover h-64 w-full" src="https://ivancea.moldtelecom.md/images/DSC_6213.jpg"
+              <img class="object-cover h-64 w-full" src="https://ivancea.moldtelecom.md/images/DSC_0757.jpg"
                 alt="Orheiul vechi">
             </div>
           </a>
@@ -199,9 +223,9 @@
       <div class="responsive mt-36 text-center">
         <div class="heading ">Vizită tezaurul natural al Moldovei</div>
         <div class="text mt-8">
-          Noi combinăm frumusețea naturii cu comfortul modernului, vă punem
-          la dispoziție toate condițiile pentru a
-          avea o <span class="font-bold"> experiență de neuitat.</span>
+          Ai șansa să te aproprii de natură și de bogăția naturală a Republicii Moldova. 
+          Ne aflăm în apropriearea Orheiului vechi unde poți admira 
+          <span class="font-bold"> cele mai frumoase privești</span> din țară.
 
           <div class="flex md:gap-8 gap-1 mt-12">
 
@@ -236,9 +260,8 @@
               </span>
             </p>
             <div class="text w-full mt-8 mb-8">
-              Pentru activităţi de relaxare şi petrecere a timpului liber, pe
-              teritoriul complexului sunt amplasate 3
-              terenuri sportive
+              Vino la noi următoarea dată când planifici să te retragi în natură.
+              Îți vom rămâne cu siguranță întipărit în minte, <span class="font-bold">în inimă.</span>
             </div>
           </div>
           <div class="md:w-1/2 w-full md:pl-8 pl-0 ">
@@ -270,33 +293,35 @@
           </div>
         </marquee>
         <div class="bg-black h-56 w-full">
-          <div class="mx-auto w-full max-w-[1512px] xl:px-[200px] [&>*]:px-4">
-            <div class="flex flex-row justify-between py-8">
+          <div class="responsive">
+            <div class="flex flex-row justify-between py-8 px-4 ">
               <div class="flex flex-col md:text-start text-center w-full">
+
                 <div class="font-display text-white pb-2">
                   Inima Codrilor <sup class="text-white text-base">2023</sup>
                 </div>
-                <div class="text-white flex-col flex text-xl gap-1">
-                  <a href="">Contactează-ne</a>
-                  <a href="">Unde ne găsești?</a>
-                  <a href="">Servicii</a>
+                <div class="text-white flex-col flex text-xl gap-1 md:w-72 w-full">
+                  <a href="/contact.html">Contactează-ne</a>
+                  <a href="/despre-noi.html/#harta">Unde ne găsești?</a>
+                  <a href="/servicii.html">Servicii</a>
                 </div>
               </div>
               <div class="[&>*]:text-white text-lg md:block hidden">
                 <p>
                   Telefon Recepție:<br />
-                <p class="bg-primary p-2 hover:scale-125 transition">+373 67
+                <p class="p-2 hover:scale-125 transition border-b-[3px] border-primary">+373 67
                   300 500</p>
                 </p>
                 <p>
                   Email: <br />
-                <p class="bg-primary p-2 hover:scale-125 transition">inima.codrilor@gmail.com</p>
+                <p class="p-2 hover:scale-125 transition border-b-[3px] border-primary">inima.codrilor@gmail.com</p>
                 </p>
               </div>
             </div>
           </div>
         </div>
       </footer>
+
     </main>
   </div>
 </body>

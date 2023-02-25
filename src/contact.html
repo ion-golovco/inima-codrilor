@@ -4,22 +4,54 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="../output.css" />
+  <script src="./js/eventListener.js"></script>
   <title>Inima Codrilor</title>
 </head>
 
 <body class="w-full font-text">
 
-  <header class="text-xl">
-    <div class="justify-center flex gap-6 bg-white">
-      <a class="py-4 md:block hidden hover:text-primary" href="./servicii.html">Servicii</a>
-      <a class="py-4 md:block hidden hover:text-primary" href="./despre-noi.html">Despre noi</a>
-      <div class="py-3 text-3xl font-display"><a href="./index.html">Inima Codrilor</a></div>
-      <a class="py-4 md:block hidden hover:text-primary" href="./evenimente.html">Evenimente</a>
-      <a class="py-4 md:block hidden text-primary" href="./contact.html">Contacte</a>
+  <header class="text-xl justify-start md:justify-center flex">
+    <div class="md:block hidden z-50">
+      <div class="justify-center flex gap-6 px-2">
+        <a class="py-4 hover:text-primary" href="./servicii.html">Servicii</a>
+        <a class="py-4 hover:text-primary" href="./despre-noi.html">Despre noi</a>
+        <div class="py-3 text-3xl font-display flex flex-row ">
+          <a href="/#hello">Inima Codrilor</a>
+        </div>
+        <a class="py-4  hover:text-primary" href="./evenimente.html">Evenimente</a>
+        <a class="py-4  text-primary" href="./contact.html">Contacte</a>
+      </div>
+    </div>
+    <div class="block md:hidden z-40 w-full">
+      <div class="flex flex-row justify-end">
+        <a class="py-3 text-3xl font-display w-full text-center absolute">
+          Inima Codrilor
+        </a>
+        <button id="hamburger-button" class="text-3xl py-3 px-4 cursor-pointer z-50">&#9776;</button>
+      </div>
+    </div>
+    <div id="mobile-menu" class="fixed h-screen w-full bg-white z-[60] border-primary hidden border-b-4">
+      <div class="flex w-full flex-col gap-4 text-center text-black ">
+        <div class="border-primary border-b-4 flex flex-row justify-end">
+          <a class="py-3 text-3xl font-display w-full text-center absolute">
+            Inima Codrilor
+          </a>
+          <button id="hamburger-button" class="text-6xl px-3 cursor-pointer z-50">&times;</button>
+        </div>
+        <a class="text-3xl text hover:text-primary mt-8" href="/#hello">Acasă</a>
+        <a class="text-3xl text hover:text-primary" href="./servicii.html">Servicii</a>
+        <a class="text-3xl text hover:text-primary" href="./despre-noi.html">Despre noi</a>
+        <a class="text-3xl text hover:text-primary" href="./evenimente.html">Evenimente</a>
+        <a class="text-3xl text hover:text-primary" href="./contact.html">Contacte</a>
+      </div>
     </div>
   </header>
 
   <main class="mx-auto w-full max-w-[1512px] xl:px-[200px] font-text">
+    
+    <div class="fb-page" data-href="https://www.facebook.com/inima.codrilor" data-tabs="timeline" data-width="" data-height="" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="false"><blockquote cite="https://www.facebook.com/inima.codrilor" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/inima.codrilor">Inima Codrilor</a></blockquote></div>
+    
+    
     <div class=" ">
       <div class="flex justify-end">
         <p class="py-4 px-8 bg-back text-2xl mb-24 w-96">
@@ -43,30 +75,33 @@
   <footer class="text-2xl overflow-hidden">
     <marquee direction="right" class="bg-primary">
       <div class="font-display text-white py-2">
-        - Inima Codrilor - Te așteptăm - Inima Codrilor - Te așteptăm - Inima Codrilor -
+        - Inima Codrilor - Te așteptăm - Inima Codrilor - Te așteptăm -
+        Inima Codrilor -
       </div>
     </marquee>
     <div class="bg-black h-56 w-full">
-      <div class="mx-auto w-full max-w-[1512px] xl:px-[200px] [&>*]:px-4">
-        <div class="flex flex-row justify-between py-8">
+      <div class="responsive">
+        <div class="flex flex-row justify-between py-8 px-4 ">
           <div class="flex flex-col md:text-start text-center w-full">
+
             <div class="font-display text-white pb-2">
               Inima Codrilor <sup class="text-white text-base">2023</sup>
             </div>
-            <div class="text-white flex-col flex text-xl gap-1">
-              <a href="">Contactează-ne</a>
-              <a href="">Unde ne găsești?</a>
-              <a href="">Servicii</a>
+            <div class="text-white flex-col flex text-xl gap-1 md:w-72 w-full">
+              <a href="/contact.html">Contactează-ne</a>
+              <a href="/despre-noi.html/#harta">Unde ne găsești?</a>
+              <a href="/servicii.html">Servicii</a>
             </div>
           </div>
           <div class="[&>*]:text-white text-lg md:block hidden">
             <p>
               Telefon Recepție:<br />
-            <p class="bg-primary p-2 hover:scale-125 transition">+373 67 300 500</p>
+            <p class="p-2 hover:scale-125 transition border-b-[3px] border-primary">+373 67
+              300 500</p>
             </p>
             <p>
               Email: <br />
-            <p class="bg-primary p-2 hover:scale-125 transition">inima.codrilor@gmail.com</p>
+            <p class="p-2 hover:scale-125 transition border-b-[3px] border-primary">inima.codrilor@gmail.com</p>
             </p>
           </div>
         </div>
@@ -74,5 +109,8 @@
     </div>
   </footer>
 </body>
+
+<div id="fb-root"></div>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/ro_RO/sdk.js#xfbml=1&version=v16.0" nonce="Em1vJbbj"></script>
 
 </html>
