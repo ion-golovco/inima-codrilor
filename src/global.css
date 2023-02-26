@@ -15,6 +15,9 @@
   .heading{
     @apply md:text-5xl text-4xl md:px-4 px-2 font-display
   }
+  img{
+    @apply saturate-150
+  }
 }
 
 * {
