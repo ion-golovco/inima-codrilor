@@ -14,6 +14,9 @@ Hostat pe netlify alături de alte proiecte de @ion-golovco
 Elaborat fără de framework-uri, fiind interzis prin regulament.
 
 ## Important
+Pentru a valida autenticitatea, mergeți prin commit-uri pe github:
+https://github.com/ion-golovco/inima-codrilor
+
 Licență MIT - Open Source
 Imagini de @Maria Lupan
 https://unsplash.com/@luandmario
