@@ -11,7 +11,7 @@ let mouse = new THREE.Vector2();
 let animationScripts = [];
 let scrollPercent = 0;
 
-const colors = [new THREE.Color(0xffffff), new THREE.Color(0xffe799)];
+const colors = [new THREE.Color(0xE9F2DC), new THREE.Color(0xffe799)];
 
 let geometry = new THREE.PlaneGeometry( 250, 250 );
 let material = new THREE.MeshBasicMaterial( {color: 0x98C05E, transparent:true} );
@@ -20,7 +20,7 @@ cortina.position.z = -10
 cortina.rotation.z = Math.PI / 2
 
 for (let i = 0; i < 3; i++) {
-  loadSVG(`./assets/layer${i}.svg`, 12 + 8 * i);
+  loadSVG(`./assets/layer${i}.svg`, 12 + 8 * i, -0.75*i);
 }
 
 initial();

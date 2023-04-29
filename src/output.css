@@ -632,11 +632,6 @@ img{
   margin-bottom: 2rem;
 }
 
-.mx-4{
-  margin-left: 1rem;
-  margin-right: 1rem;
-}
-
 .mt-8{
   margin-top: 2rem;
 }
@@ -681,6 +676,10 @@ img{
   margin-top: 7rem;
 }
 
+.mb-24{
+  margin-bottom: 6rem;
+}
+
 .mt-40{
   margin-top: 10rem;
 }
@@ -707,6 +706,10 @@ img{
 
 .mt-6{
   margin-top: 1.5rem;
+}
+
+.mb-\[590px\]{
+  margin-bottom: 590px;
 }
 
 .block{
@@ -773,6 +776,10 @@ img{
   height: 600px;
 }
 
+.h-\[85vh\]{
+  height: 85vh;
+}
+
 .w-full{
   width: 100%;
 }
@@ -789,12 +796,8 @@ img{
   width: auto;
 }
 
-.w-2\/3{
-  width: 66.666667%;
-}
-
-.w-1\/3{
-  width: 33.333333%;
+.w-40{
+  width: 10rem;
 }
 
 .table-auto{
@@ -803,6 +806,11 @@ img{
 
 .rotate-3{
   --tw-rotate: 3deg;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.-skew-x-6{
+  --tw-skew-x: -6deg;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
@@ -874,6 +882,10 @@ img{
   gap: 0.25rem;
 }
 
+.gap-2{
+  gap: 0.5rem;
+}
+
 .gap-y-12{
   row-gap: 3rem;
 }
@@ -923,12 +935,24 @@ img{
   border-bottom-width: 3px;
 }
 
+.border-t-4{
+  border-top-width: 4px;
+}
+
 .border-l-\[6px\]{
   border-left-width: 6px;
 }
 
 .border-l-4{
   border-left-width: 4px;
+}
+
+.border-t-8{
+  border-top-width: 8px;
+}
+
+.border-t-\[6px\]{
+  border-top-width: 6px;
 }
 
 .border-primary{
@@ -946,9 +970,8 @@ img{
   border-color: rgb(255 255 255 / var(--tw-border-opacity));
 }
 
-.border-red{
-  --tw-border-opacity: 1;
-  border-color: rgb(246 186 166 / var(--tw-border-opacity));
+.border-t-\[6\]{
+  border-top-color: 6;
 }
 
 .bg-white{
@@ -966,23 +989,14 @@ img{
   background-color: rgb(11 13 7 / var(--tw-bg-opacity));
 }
 
-.bg-\[\#f3f3f3\]{
+.bg-back{
   --tw-bg-opacity: 1;
-  background-color: rgb(243 243 243 / var(--tw-bg-opacity));
-}
-
-.bg-\[\]{
-  background-color: ;
+  background-color: rgb(248 248 248 / var(--tw-bg-opacity));
 }
 
 .bg-red{
   --tw-bg-opacity: 1;
   background-color: rgb(246 186 166 / var(--tw-bg-opacity));
-}
-
-.bg-back{
-  --tw-bg-opacity: 1;
-  background-color: rgb(243 243 243 / var(--tw-bg-opacity));
 }
 
 .object-cover{
@@ -1042,6 +1056,11 @@ img{
   padding-bottom: 0.25rem;
 }
 
+.py-64{
+  padding-top: 16rem;
+  padding-bottom: 16rem;
+}
+
 .pl-0{
   padding-left: 0px;
 }
@@ -1052,10 +1071,6 @@ img{
 
 .pt-4{
   padding-top: 1rem;
-}
-
-.pr-0{
-  padding-right: 0px;
 }
 
 .pt-8{
@@ -1248,6 +1263,13 @@ canvas {
   z-index: -9999;
 }
 
+#image-track > .image {
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: 100% center;
+     object-position: 100% center;
+}
+
 .hover\:translate-x-2:hover{
   --tw-translate-x: 0.5rem;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
@@ -1310,10 +1332,6 @@ canvas {
     height: 100%;
   }
 
-  .md\:h-\[85vh\]{
-    height: 85vh;
-  }
-
   .md\:w-1\/2{
     width: 50%;
   }
@@ -1330,6 +1348,10 @@ canvas {
     width: 60%;
   }
 
+  .md\:w-60{
+    width: 15rem;
+  }
+
   .md\:flex-row{
     flex-direction: row;
   }
@@ -1344,10 +1366,6 @@ canvas {
 
   .md\:justify-center{
     justify-content: center;
-  }
-
-  .md\:gap-8{
-    gap: 2rem;
   }
 
   .md\:border-y-\[6px\]{

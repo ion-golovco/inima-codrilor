@@ -2,7 +2,7 @@ import * as THREE from "./libs/three.js";
 import { SVGLoader } from "./libs/SVGloader.js";
 import { scene } from "./Scene.js";
 
-function loadSVG(url, z) {
+function loadSVG(url, z, y) {
   const scale = 0.03;
   const loader = new SVGLoader();
   loader.load(url, function (data) {
@@ -52,7 +52,7 @@ function loadSVG(url, z) {
       }
     }
     group.position.x = -683 * scale;
-    group.position.y = 384 * scale;
+    group.position.y = 384 * scale + y;
     group.position.z = -z;
     scene.add(group);
   });
