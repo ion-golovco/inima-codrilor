@@ -7,6 +7,9 @@
   <script src="./js/eventListener.js"></script>
   <title>Inima Codrilor</title>
   <link rel="icon" href="./assets/logo.png">
+  <link rel="stylesheet" href="./js/libs/leaflet/leaflet.css" />
+  <script src="./js/libs/leaflet/leaflet.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
 </head>
 
 <body class="w-full font-text">
@@ -48,69 +51,125 @@
     </div>
   </header>
 
-  <main class="responsive">
+  <main class="overflow-hidden">
+
 
     <div class="flex w-full h-96 relative mb-12">
-      <div class="z-50 px-2 py-4 w-full">
-        <p class=" text-white heading mt-24 font-bold md:leading-tight">Descoperiți experiențe <br> unice alături de noi</p>
+      <div class="z-50 w-full grid content-center responsive text-white ">
+        <p class="heading font-bold">
+          Servicii și oferte
+        </p>
+        <p class="text mt-4 w-2/3">Îți oferim toate facilitățile pentru a te simți ca acasă</p>
       </div>
-      <img class="absolute object-cover w-full h-full brightness-[60%]"
-        src="https://images.unsplash.com/photo-1591485894253-688891cec15a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1133&q=80"
+      <img class="absolute object-cover w-full h-full brightness-[50%] saturate-[85%]" src="./assets/flori.jpg"
         alt="Orheiul vechi">
     </div>
 
-
-    <div id="cazare" class="flex flex-col md:flex-row justify-between">
-      <div class="bg-primary w-full text-white">
-        <div class="heading py-4">Cazare</div>
-        <p class="text mb-12">
-          Centrul Ivancea dispune de 30 camere de tip: single, double, triple şi apartament cu 2 camere cu specific
-          modern. Toate camerele sunt mobilate și decorate cu multă grijă și dispun de tot confortul necesar: baie
-          proprie, aer condiţionat, televizor, servicii de televiziune, Internet Wi fi, telefon, ulcior cu apă şi
-          prosoape. De asemenea, toate camerele au geamuri mari şi luminoase de unde poate fi admirat teritoriul
-          complexului hotelier.
-        </p>
-      </div>
-
-      <div class="py-4 text w-full font-medium">
-        <div class="grid h-full content-center">
-          <div class=" [&>*]:border-primary [&>*]:py-2 [&>*]:border-b-2 grid grid-cols-2 content-center">
-            <div>CAMERĂ SINGLE</div>
-            <div>- 700 MDL/noapte</div>
-          </div>
-          <div class=" [&>*]:border-primary [&>*]:py-2 [&>*]:border-b-2 grid grid-cols-2 content-center">
-            <div>CAMERĂ DOUBLE</div>
-            <div>- 800 MDL/noapte</div>
-          </div>
-          <div class=" [&>*]:border-primary [&>*]:py-2 [&>*]:border-b-2 grid grid-cols-2 content-center">
-            <div>CAMERĂ TRIPLE</div>
-            <div>- 900 MDL/noapte</div>
-          </div>
-          <div class=" [&>*]:border-primary [&>*]:py-2 [&>*]:border-b-2 grid grid-cols-2 content-center">
-            <div>APARTAMENT CU 2 CAMERE</div>
-            <div>- 1400 MDL/noapte</div>
-          </div>
+    <div class="flex relative text-white overflow-hidden bg-black">
+      <div class="w-full md:h-36 h-28 z-50">
+        <div class="text-center absolute w-full heading rotate-12 -top-24 -left-8">
+          <p class=" "> Servicii - Cazare - Săli - Restaurant - Inima Codrilor -<span class="text-primary"> Inima
+              Codrilor</span> - Servicii - Cazare - Săli <span class="text-primary">- Restaurant -</span> Servicii -
+            Cazare - Săli - Restaurant -Inima
+            Codrilor<span class="text-primary"> - Inima
+              Codrilor - </span> Servicii - Cazare - Săli - Restaurant - Inima Codrilor<span class="text-primary"> -
+              Inima
+              Codrilor - </span> -Inima Codrilor - Servicii - Cazare - Săli - Restaurant - Inima Codrilor
+          </p>
         </div>
       </div>
     </div>
 
 
-    <div class="border-l-4 border-primary mt-12">
-      <div class="heading text-primary ">RESTAURANT</div>
-      <div class="text pt-4">
-        Restaurantul Centrului de Instruire şi Agrement Ivancea, este amplasat în complexul destinat sălilor pentru
-        seminare şi evenimente. Acesta vă pune la dispoziţie o bucătărie tradiţională şi o sală cu o capacitate pentru
-        80 de persoane.
+    <div class="responsive">
+
+      <div class="flex w-full md:h-[85vh] mt-12 md:flex-row flex-col-reverse" id="cazare">
+
+        <div class="md:w-1/2 w-full h-full  overflow-hidden relative">
+
+          <div class="carousel flex flex-row w-full h-full">
+            <img class="object-cover h-full saturate-[125%]" src="./assets/single.jpg" alt="Orheiul vechi">
+            <img class="object-cover h-full saturate-[125%]" src="./assets/flori.jpg" alt="Orheiul vechi">
+            <img class="object-cover h-full saturate-[125%]" src="./assets/triple.jpg" alt="Orheiul vechi">
+            <img class="object-cover h-full saturate-[125%]" src="./assets/flori.jpg" alt="Orheiul vechi">
+          </div>
+
+        </div>
+
+        <div class="w-full grid content-center md:px-8 md:w-1/2">
+          <p class="heading">
+            Cazare
+          </p>
+          <p class="text mt-8">
+            Centrul Ivancea dispune de 30 camere de tip: single, double, triple şi apartament cu specific
+            modern. Toate camerele sunt mobilate și decorate cu multă grijă și dispun de tot confortul necesar.
+          </p>
+          <div class="pt-6 pb-4 text w-full font-medium">
+            <div class="grid h-full content-center border-primary">
+              <div onclick="carousel(1)"
+                class=" [&>*]:hover:border-primary [&>*]:py-2 [&>*]:border-b-2 grid grid-cols-2 content-center hover:cursor-pointer">
+                <div>CAMERĂ SINGLE</div>
+                <div>- 700 MDL/noapte</div>
+              </div>
+              <div onclick="carousel(2)"
+                class=" [&>*]:hover:border-primary [&>*]:py-2 [&>*]:border-b-2 grid grid-cols-2 content-center hover:cursor-pointer">
+                <div>CAMERĂ DOUBLE</div>
+                <div>- 800 MDL/noapte</div>
+              </div>
+              <div onclick="carousel(3)"
+                class=" [&>*]:hover:border-primary [&>*]:py-2 [&>*]:border-b-2 grid grid-cols-2 content-center hover:cursor-pointer">
+                <div>CAMERĂ TRIPLE</div>
+                <div>- 900 MDL/noapte</div>
+              </div>
+              <div onclick="carousel(4)"
+                class=" [&>*]:hover:border-primary [&>*]:py-2 [&>*]:border-b-2 grid grid-cols-2 content-center hover:cursor-pointer">
+                <div>APARTAMENT CU 2 CAMERE</div>
+                <div>- 1400 MDL/noapte</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
       </div>
+
+      <div class="flex w-full md:h-[85vh] md:flex-row flex-col-reverse">
+        <div class="w-full grid content-center md:px-8">
+          <p class="heading text-center">
+            Facilități
+          </p>
+
+        </div>
+        <img class="object-cover md:w-1/2 w-full h-full saturate-100"
+          src="https://ivancea.moldtelecom.md/images/DSC_6213.jpg" alt="Orheiul vechi">
+      </div>
+
     </div>
+
+    <div class="flex flex-wrap gap-2 [&>*]:h-36 [&>*]:w-40 mt-8 [&>*]:p-2 text-center [&>*]:bg-black text-white text">
+      <div>Wi-fi</div>
+      <div>Parcare</div>
+      <div>Aer condiţionat</div>
+      <div>TV</div>
+      <div>Bar / restaurant</div>
+      <div>Parc pentru copii</div>
+      <div>BBQ</div>
+      <div>Fumoar</div>
+      <div>Cadă / Duș</div>
+    </div>
+
+
+
+
+
+
 
     <div class="flex w-full h-96 relative my-12">
       <div class="z-50 py-4 px-2 w-full">
-        <p class=" text-white heading mt-32 font-bold md:leading-tight">Opțiuni de Relaxare <br> și  Activitate Fizică</p>
+        <p class=" text-white heading mt-32 font-bold md:leading-tight">Opțiuni de Relaxare <br> și Activitate Fizică
+        </p>
       </div>
       <img class="absolute object-cover w-full h-full brightness-[60%]"
-        src="https://ivancea.moldtelecom.md/images/foisor.jpg"
-        alt="Orheiul vechi">
+        src="https://ivancea.moldtelecom.md/images/foisor.jpg" alt="Orheiul vechi">
     </div>
 
     <div class="flex flex-col md:flex-row justify-between">
@@ -141,6 +200,8 @@
         </div>
       </div>
     </div>
+
+
 
     <div class="flex flex-col md:flex-row justify-between">
       <div class="bg-red w-full mb-12 text-white">
@@ -174,11 +235,11 @@
 
     <div class="flex w-full h-96 relative mb-12">
       <div class="z-50 py-4 px-2 w-full">
-        <p class=" text-white heading mt-32 font-bold md:leading-tight">Spații pentru Întâlniri <br> și Evenimente de Afaceri</p>
+        <p class=" text-white heading mt-32 font-bold md:leading-tight">Spații pentru Întâlniri <br> și Evenimente de
+          Afaceri</p>
       </div>
       <img class="absolute object-cover w-full h-full brightness-[60%]"
-        src="https://ivancea.moldtelecom.md/images/conference2(1).jpg"
-        alt="Orheiul vechi">
+        src="https://ivancea.moldtelecom.md/images/conference2(1).jpg" alt="Orheiul vechi">
     </div>
 
     <div id="spatii" class="bg-primary text-white w-full mb-12">
@@ -317,5 +378,11 @@
     </div>
   </footer>
 </body>
+<script>var mymap = L.map('map').setView([51.505, -0.09], 13);
+
+  L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
+    attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+  }).addTo(mymap);</script>
+<script src="./js/servicii.js"></script>
 
 </html>

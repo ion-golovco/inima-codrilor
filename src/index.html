@@ -13,32 +13,11 @@
     rel="stylesheet" />
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
 
-
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollTrigger.min.js"></script>
- 
-  <style>
-    .swiper {
-      width: 100%;
-      height: 100%;
-    }
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollToPlugin.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/EasePack.min.js"></script>
 
-    .swiper-slide {
-      text-align: center;
-      font-size: 18px;
-      background: #fff;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-
-    .swiper-slide img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-  </style>
-  
 </head>
 
 <body class="relative w-full font-text overflow-x-hidden">
@@ -49,7 +28,7 @@
     <div class="flex content-center justify-center text-center h-[95vh] flex-col text-white anim-Hello">
       <p class="text-[2rem]">Te așteptăm în </p>
       <div class="md:text-[8rem] text-[5rem] leading-none font-display">Inima codrilor</div>
-      <a class="hover:scale-125 transition text-[2rem]" href="#hello">↓ Intră ↓ </a>
+      <button class="hover:scale-125 transition text-[2rem]" onclick="helloButton()" >↓ Intră ↓ </button>
     </div>
 
     <main class="bg-white">
@@ -141,13 +120,23 @@
 
       </div>
 
-      <div class=" bg-back pt-4 mt-48">
+      <div class="flex relative text-white mt-48 overflow-hidden bg-black">
+        <div class="w-full md:h-36 h-28 z-50">
+          <div class="text-center absolute w-full heading rotate-12 -top-24 -left-8">
+            <p class=" ">Inima Codrilor - Inima Codrilor - Inima Codrilor - Te așteptăm <span class="text-primary"> - Inima Codrilor - </span> Inima
+              Codrilor - Inima Codrilor - Te așteptăm <span class="text-primary"> - Inima Codrilor - </span>  Inima Codrilor - Inima
+              Codrilor - - Te așteptăm - <span class="text-primary"> Inima Codrilor </span> - - Inima Codrilor - Inima Codrilor - Te așteptăm - Inima
+              Codrilor - Te așteptăm - Inima Codrilor</p>
+          </div>
+        </div>
+      </div>
+      
         <div class="py-8">
-          <div class="responsive">
+          <div class="responsive py-8">
             <div class="heading">Ce îți oferim?</div>
             <div class="text mt-8">
-              Vă oferim cadrul ideal pentru a vă relaxa și a vă bucura de ședere, înconjurat de
-              splendoarea naturii și îmbunătățit cu <span class="font-bold">facilități moderne.</span>
+              Vă oferim cadrul ideal înconjurat de
+              splendoarea naturii și îmbunătățit cu <span class="font-bold">facilități moderne</span>, pentru a vă relaxa și a vă bucura de ședere.
             </div>
           </div>
         </div>
@@ -184,7 +173,7 @@
             </div>
           </a>
         </div>
-      </div>
+    
 
 
       <div class="bg-back mt-4">
@@ -221,31 +210,33 @@
       <div class="responsive mt-36 text-center">
         <div class="heading ">Tezaurul natural al Moldovei</div>
         <div class="text mt-8">
-          <span class='hidden md:block'> Ai șansa să te aproprii de natură și de bogăția naturală a Republicii Moldova.</span>
+          <span class='hidden md:block'> Ai șansa să te aproprii de natură și de bogăția naturală a Republicii
+            Moldova.</span>
           Ne aflăm în apropriearea Orheiului vechi unde poți admira
           <span class="font-bold"> cele mai frumoase priveliști</span> din țară.
 
-          <div class="mb-[590px] mt-12">
-            <div id="image-track" class="w-full flex justify-center gap-2 absolute" data-mouse-down-at="0" data-prev-percentage="0" >
+          <div class="mb-[590px] mt-12 cursor-grab">
+            <div id="image-track" class="w-full flex justify-center gap-2 absolute" data-mouse-down-at="0"
+              data-prev-percentage="0">
               <img class="brightness-[80%] image h-96 md:w-60 w-40 -skew-x-6"
                 src="https://images.unsplash.com/photo-1600159953570-df048e507c7b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80"
                 alt="MĂNĂSTIREA CURCHI">
               <img class="brightness-[80%] image h-96 md:w-60 w-40  -skew-x-6"
                 src="https://upload.wikimedia.org/wikipedia/commons/a/a9/Stanca_deasupra_Rautului_Butuceni.jpg"
                 alt="Orheiul vechi">
-                <img class="brightness-[80%] image h-96 md:w-60 w-40 -skew-x-6"
+              <img class="brightness-[80%] image h-96 md:w-60 w-40 -skew-x-6"
                 src="https://images.unsplash.com/photo-1600159953570-df048e507c7b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80"
                 alt="MĂNĂSTIREA CURCHI">
               <img class="brightness-[80%] image h-96 md:w-60 w-40  -skew-x-6"
                 src="https://upload.wikimedia.org/wikipedia/commons/a/a9/Stanca_deasupra_Rautului_Butuceni.jpg"
                 alt="Orheiul vechi">
-                <img class="brightness-[80%] image h-96 md:w-60 w-40 -skew-x-6"
+              <img class="brightness-[80%] image h-96 md:w-60 w-40 -skew-x-6"
                 src="https://images.unsplash.com/photo-1600159953570-df048e507c7b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80"
                 alt="MĂNĂSTIREA CURCHI">
               <img class="brightness-[80%] image h-96 md:w-60 w-40  -skew-x-6"
                 src="https://upload.wikimedia.org/wikipedia/commons/a/a9/Stanca_deasupra_Rautului_Butuceni.jpg"
                 alt="Orheiul vechi">
-              </div>
+            </div>
           </div>
 
         </div>
@@ -334,4 +325,5 @@
 </body>
 
 <script src="./js/eventListener.js"></script>
+<script src="./js/mainAnimation.js"></script>
 </html>
