@@ -6,43 +6,45 @@
   <link rel="stylesheet" href="../output.css" />
   <title>Inima Codrilor</title>
   <script src="./js/eventListener.js"></script>
-  <link rel="icon" href="./assets/logo.png">
+  <link rel="icon" href="./assets/logo.png" />
   <script src="https://unpkg.com/feather-icons"></script>
-  <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+
+  <link rel="stylesheet" href="./js/libs/leaflet/leaflet.css" />
+  <script src="./js/libs/leaflet/leaflet.js"></script>
 </head>
 
-
 <body class="w-full font-text">
-
   <header class="text-xl justify-start md:justify-center flex">
     <div class="md:block hidden z-50">
       <div class="justify-center flex gap-6 px-2">
         <a class="py-4 hover:text-primary" href="./servicii.html">Servicii</a>
         <a class="py-4 text-primary" href="./despre-noi.html">Despre noi</a>
-        <div class="py-3 text-3xl font-display flex flex-row ">
+        <div class="py-3 text-3xl font-display flex flex-row">
           <a href="/#hello">Inima Codrilor</a>
         </div>
-        <a class="py-4  hover:text-primary" href="./evenimente.html">Evenimente</a>
-        <a class="py-4  hover:text-primary" href="./contact.html">Contacte</a>
+        <a class="py-4 hover:text-primary" href="./evenimente.html">Evenimente</a>
+        <a class="py-4 hover:text-primary" href="./contact.html">Contacte</a>
       </div>
     </div>
     <div class="block md:hidden z-40 w-full">
       <div class="flex flex-row justify-end">
-        <a class="py-3 text-3xl font-display w-full text-center absolute">
+        <a class="py-2 text-3xl font-display w-full text-center absolute">
           Inima Codrilor
         </a>
-        <button id="hamburger-button" class="text-3xl py-3 px-4 cursor-pointer z-50">&#9776;</button>
+        <button id="hamburger-button" class="py-3 pt-4 px-4 cursor-pointer z-50"><i data-feather="menu">a</i></button>
       </div>
     </div>
-    <div id="mobile-menu" class="fixed h-screen w-full bg-white z-[60] border-primary hidden border-b-4">
-      <div class="flex w-full flex-col gap-4 text-center text-black ">
-        <div class="border-primary border-b-4 flex flex-row justify-end">
-          <a class="py-3 text-3xl font-display w-full text-center absolute">
+
+    <div id="mobile-menu" class="fixed h-screen top-0 w-full bg-white z-[60] border-black hidden border-b-4">
+      <div class="flex w-full flex-col gap-6 text-center text-black font-light">
+        <div class="flex flex-row justify-end font-normal">
+          <a class="py-2 text-3xl font-display w-full text-center absolute">
             Inima Codrilor
           </a>
-          <button id="hamburger-button" class="text-6xl px-3 cursor-pointer z-50">&times;</button>
+          <button id="hamburger-button" class="py-3 pt-4 px-3 cursor-pointer z-50"><i
+              data-feather="x">a</i></button>
         </div>
-        <a class="text-3xl text hover:text-primary mt-8" href="/#hello">Acasă</a>
+        <a class="text-3xl text hover:text-primary mt-36" href="./index.html#hello">Acasă</a>
         <a class="text-3xl text hover:text-primary" href="./servicii.html">Servicii</a>
         <a class="text-3xl text hover:text-primary" href="./despre-noi.html">Despre noi</a>
         <a class="text-3xl text hover:text-primary" href="./evenimente.html">Evenimente</a>
@@ -51,95 +53,124 @@
     </div>
   </header>
 
-
-  <main class="responsive">
-
+  <main>
     <div class="flex w-full h-96 relative mb-12">
-      <div class="z-40 py-4 px-2">
-        <p class=" text-white heading mt-24 font-bold md:leading-tight"> Scăpați de oraș și relaxați-vă în
-          pădure</p>
+      <div class="z-50 w-full grid content-center responsive text-white">
+        <p class="heading font-bold w-2/3 leading-tight">Scăpați de oraș și relaxați-vă în pădure</p>
       </div>
-      <img class="absolute object-cover w-full h-full brightness-[60%]"
+      <img class="absolute object-cover w-full h-full brightness-[50%] saturate-100"
         src="https://images.unsplash.com/photo-1603097121892-709f30dd2f29?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
-        alt="Orheiul vechi">
+        alt="Orheiul vechi" />
     </div>
 
-
-    <div class="text-primary heading mb-4">Despre noi</div>
-
-    <div class="text mb-12">
-    Centrul de Instruire şi Agrement Ivancea este situat într-o zonă foarte pitorească în inima Codrilor
-    Moldovei, la 30 km distanţa de Chişinău. Centrul dispune de 2 blocuri hoteliere, restaurant, săli de
-    conferinţă, terenuri sportive şi foişoare în aer liber. Este o locaţie perfectă pentru evenimente de
-    familie, escapade de weekend, team building şi întâlniri de afaceri.
-    </div>
-
-    <div id="harta" class=" bg-primary text-white py-4 heading">Unde ne aflăm?</div>
-
-    <div class="w-full mb-6">
-      <iframe class="w-full h-[500px] "
-        src="https://maps.google.com/maps?q=inima%20codrilor&t=&z=9&ie=UTF8&iwloc=&output=embed" frameborder="0"
-        scrolling="no"></iframe><br>
-    </div>
-
-    
-      <div class="text-primary heading mb-4">Activi în atmosferă de pădure</div>
-      <div class="text mb-12">
-      Pentru activităţi de relaxare şi petrecere a timpului liber, pe teritoriul complexului sunt amplasate 3
-      terenuri sportive: de fotbal, baschet şi volei. Pe lângă activităţi sportive, pe teritoriul complexului
-      sunt situate 7 foişoare cu o capacitate totală de 272 locuri unde pot fi desfăşurate cu succes evenimente
-      profesionale sau de familie, în aer liber.
-    </div>
-
-    <div class="flex w-full h-96 relative mb-12">
-      <div class="z-50 py-4 px-2">
-        <p class="text-white heading mt-32 font-bold md:leading-tight"> Ce aștepți, vino la
-          noi!</p>
+    <div class="responsive">
+      <div class="flex md:flex-row flex-col justify-center">
+        <img src="./assets/logo.png" class="w-72 md:hidden block self-center mx-4" alt="" />
+        <div class="text mb-12">
+          <div class="px-0 heading mb-4">Despre noi</div>
+          Centrul de Instruire şi Agrement Ivancea este situat într-o zonă foarte pitorească în inima Codrilor
+          Moldovei, la 30 km distanţa de Chişinău. Centrul dispune de 2 blocuri hoteliere, restaurant, săli de
+          conferinţă, terenuri sportive şi foişoare în aer liber. Este o locaţie perfectă pentru evenimente de
+          familie, escapade de weekend, team building şi întâlniri de afaceri.
+        </div>
       </div>
 
-      <img class="absolute object-cover w-full h-full brightness-75"
-        src="https://images.unsplash.com/photo-1673376982729-21c9d3a189bb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
-        alt="Orheiul vechi">
-    </div>
+      <div id="harta" class="mt-12 py-4 bg-back heading">Zona de agrement <span class="">  Inima Codrilor</span>
+        
+      </div>
+      <div id="map" class="h-[430px]"></div>
+      
 
+      <div class="heading mb-4 mt-12">Activi în atmosferă de pădure</div>
+      <div class="text mb-12">
+        Pentru activităţi de relaxare şi petrecere a timpului liber, pe teritoriul complexului sunt amplasate 3
+        terenuri sportive: de fotbal, baschet şi volei. Pe lângă activităţi sportive, pe teritoriul complexului sunt
+        situate 7 foişoare cu o capacitate totală de 272 locuri unde pot fi desfăşurate cu succes evenimente
+        profesionale sau de familie, în aer liber.
+      </div>
+
+      <div class="flex w-full h-96 relative mb-12">
+        <div class="z-50 grid content-center w-full h-full">
+          <p class="text-white heading font-bold md:leading-tight">Te așteptăm la noi!</p>
+          <div class="flex flex-row md:mx-4 mx-2">
+            <img src="./assets/pin.png" class="w-16 h-16 mt-5" alt="" />
+            <a class="w-80 mx-3 mt-8 text-2xl py-1 font-bold text-white" target="_blank"
+              href="https://maps.google.com/maps?q=inima%20codrilor&t=&z=9&ie=UTF8">
+              Direcții spre locație →
+            </a>
+          </div>
+        </div>
+        <img class="absolute object-cover w-full h-full brightness-[60%]"
+          src="https://scontent.fkiv1-1.fna.fbcdn.net/v/t1.6435-9/142902943_108731744532894_1845125930929960923_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=0debeb&_nc_ohc=yfUUTHstNRcAX-kfvmW&_nc_ht=scontent.fkiv1-1.fna&oh=00_AfBnODfNXPwGO7G3NwSXfkpjqlOYWhpJNwKe6Ijyw-4_Mg&oe=64774352"
+          alt="Orheiul vechi" />
+      </div>
+    </div>
   </main>
 
   <footer class="text-2xl overflow-hidden">
     <marquee direction="right" class="bg-primary">
       <div class="font-display text-white py-2">
-        - Inima Codrilor - Te așteptăm - Inima Codrilor - Te așteptăm -
-        Inima Codrilor -
+        - Inima Codrilor - Te așteptăm - Inima Codrilor - Te așteptăm - Inima Codrilor -
       </div>
     </marquee>
-    <div class="bg-black h-56 w-full">
+    <div class="bg-black h-56 w-full text-white">
       <div class="responsive">
-        <div class="flex flex-row justify-between py-8 px-4 ">
+        <div class="flex flex-row justify-between py-8 px-4">
           <div class="flex flex-col md:text-start text-center w-full">
-
-            <div class="font-display text-white pb-2">
-              Inima Codrilor <sup class="text-white text-base">2023</sup>
-            </div>
-            <div class="text-white flex-col flex text-xl gap-1 md:w-72 w-full">
+            <div class="font-display pb-2">Inima Codrilor <sup class="text-base">2023</sup></div>
+            <div class="flex-col flex text-xl gap-1 md:w-72 w-full">
               <a href="/contact.html">Contactează-ne</a>
               <a href="/despre-noi.html/#harta">Unde ne găsești?</a>
               <a href="/servicii.html">Servicii</a>
             </div>
           </div>
-          <div class="[&>*]:text-white text-lg md:block hidden">
-            <p>
-              Telefon Recepție:<br />
-            <p class="p-2 hover:scale-125 transition border-b-[3px] border-primary">+373 67
-              300 500</p>
-            </p>
-            <p>
-              Email: <br />
-            <p class="p-2 hover:scale-125 transition border-b-[3px] border-primary">inima.codrilor@gmail.com</p>
-            </p>
+          <div class="text-lg md:block hidden">
+            <div class="w-full border-b-[3px] border-primary">
+              <p>Telefon Recepție:</p>
+              <button onclick="callInima()" class="p-2 hover:scale-110 transition">+373 67 300 500</button>
+            </div>
+            <div class="w-full border-b-[3px] border-primary">
+              <p>Email:</p>
+              <button onclick="sendEmail()" class="p-2 hover:scale-110 transition">inima.codrilor@gmail.com</button>
+            </div>
           </div>
         </div>
       </div>
     </div>
   </footer>
+  <script>feather.replace()</script>
 </body>
+<script>
+  var map = L.map("map").setView([47.29533, 28.8162], 16);
+  L.tileLayer("http://{s}.tile.osm.org/{z}/{x}/{y}.png").addTo(map);
+
+  var myIcon = L.icon({
+    iconUrl: "./assets/pin.png",
+    iconSize: [50, 50],
+    iconAnchor: [25, 50],
+    popupAnchor: [-3, -50],
+  });
+
+  var polygon = L.polygon(
+    [
+      [47.29481, 28.814054],
+      [47.296841, 28.814392],
+      [47.296229, 28.817739],
+      [47.294701, 28.817697],
+      [47.294527, 28.816688],
+      [47.295182, 28.815165],
+    ],
+    { color: "#4e6728" }
+  ).addTo(map);
+  L.marker([47.29518, 28.815932], { icon: myIcon }).bindPopup("Teren de baschet/fotball").addTo(map);
+  L.marker([47.295585, 28.816366], { icon: myIcon }).bindPopup("Hotel 1").addTo(map);
+  L.marker([47.295414, 28.817246], { icon: myIcon }).bindPopup("Hotel 2").addTo(map);
+  L.marker([47.296022, 28.815465], { icon: myIcon }).bindPopup("Teren de joacă").addTo(map);
+  L.marker([47.295793, 28.815266], { icon: myIcon }).bindPopup("Restaurant").addTo(map);
+  L.marker([47.295651, 28.815116], { icon: myIcon }).bindPopup("Recepție").addTo(map).openPopup();
+  L.marker([47.296473, 28.81491], { icon: myIcon }).bindPopup("Zona foișoare 1").addTo(map);
+  L.marker([47.296138, 28.816516], { icon: myIcon }).bindPopup("Zona foișoare 2").addTo(map);
+  L.marker([47.295855, 28.817326], { icon: myIcon }).bindPopup("Zona foișoare 3").addTo(map);
+</script>
 
 </html>

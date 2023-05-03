@@ -10,3 +10,11 @@ document.addEventListener("DOMContentLoaded", function () {
   burger.addEventListener("click", toggleMenu);
   menu.addEventListener("click", toggleMenu);
 });
+
+function sendEmail() {
+  window.location = "mailto:inima.codrilor@gmail.com";
+}
+
+function callInima() {
+  window.location = "tel:+373 67300500";
+}

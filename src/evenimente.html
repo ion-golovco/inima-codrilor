@@ -7,6 +7,9 @@
   <script src="./js/eventListener.js"></script>
   <title>Inima Codrilor</title>
   <link rel="icon" href="./assets/logo.png">
+
+  <script src="https://unpkg.com/feather-icons"></script>
+
 </head>
 
 <body class="w-full font-text">
@@ -24,33 +27,36 @@
     </div>
     <div class="block md:hidden z-40 w-full">
       <div class="flex flex-row justify-end">
-        <a class="py-3 text-3xl font-display w-full text-center absolute">
+        <a class="py-2 text-3xl font-display w-full text-center absolute">
           Inima Codrilor
         </a>
-        <button id="hamburger-button" class="text-3xl py-3 px-4 cursor-pointer z-50">&#9776;</button>
+        <button id="hamburger-button" class="py-3 pt-4 px-4 cursor-pointer z-50"><i data-feather="menu">a</i></button>
       </div>
     </div>
-    <div id="mobile-menu" class="fixed h-screen w-full bg-white z-[60] border-primary hidden border-b-4">
-      <div class="flex w-full flex-col gap-4 text-center text-black ">
-        <div class="border-primary border-b-4 flex flex-row justify-end">
-          <a class="py-3 text-3xl font-display w-full text-center absolute">
+
+    <div id="mobile-menu" class="fixed h-screen top-0 w-full bg-white z-[60] border-black hidden border-b-4">
+      <div class="flex w-full flex-col gap-6 text-center text-black font-light">
+        <div class="flex flex-row justify-end font-normal">
+          <a class="py-2 text-3xl font-display w-full text-center absolute">
             Inima Codrilor
           </a>
-          <button id="hamburger-button" class="text-6xl px-3 cursor-pointer z-50">&times;</button>
+          <button id="hamburger-button" class="py-3 pt-4 px-3 cursor-pointer z-50"><i
+              data-feather="x">a</i></button>
         </div>
-        <a class="text-3xl text hover:text-primary mt-8" href="/#hello">Acasă</a>
+        <a class="text-3xl text hover:text-primary mt-36" href="./index.html#hello">Acasă</a>
         <a class="text-3xl text hover:text-primary" href="./servicii.html">Servicii</a>
         <a class="text-3xl text hover:text-primary" href="./despre-noi.html">Despre noi</a>
         <a class="text-3xl text hover:text-primary" href="./evenimente.html">Evenimente</a>
         <a class="text-3xl text hover:text-primary" href="./contact.html">Contacte</a>
       </div>
     </div>
+
   </header>
 
   <main>
     <div class="flex w-full h-96 relative mb-36">
-      <div class="z-50 responsive">
-        <p class="text-white heading mt-28 font-bold md:leading-tight ">Organizăm evenimentele tale de succes
+      <div class="z-50 responsive grid content-center">
+        <p class="text-white heading font-bold md:leading-tight ">Organizăm evenimentele tale de succes
         </p>
       </div>
       <img class="absolute object-cover w-full h-full brightness-[50%]"
@@ -66,35 +72,28 @@
 
       <div class="flex md:flex-row flex-col justify-between gap-y-12">
         <div class="flex-col flex w-full md:w-1/3">
-          <img
-            class="w-60 h-60 object-cover rounded-full self-center"
+          <img class="w-60 h-60 object-cover rounded-full self-center"
             src="https://images.unsplash.com/photo-1629541249992-59768f5229d7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80"
-            alt="info-card"
-          />
+            alt="info-card" />
           <p class="text text-center mt-8">
             Îți asigurăm un loc pitoresc în natură, sau o sală spațioasă pentru seminarele tale.
           </p>
         </div>
 
         <div class="flex-col flex w-full md:w-1/3">
-          <img
-            class="w-60 h-60 object-cover rounded-full self-center"
-            src="https://ivancea.moldtelecom.md/images/restaurant.jpg"
-            alt="info-card"
-          />
+          <img class="w-60 h-60 object-cover rounded-full self-center"
+            src="https://ivancea.moldtelecom.md/images/restaurant.jpg" alt="info-card" />
           <p class="text text-center mt-8">
-            Îți punem la dispoziție un meniu bogat de bogate, nu este nevoie de catering.
+            Îți punem la dispoziție un meniu bogat de bucate, nu este nevoie de catering.
           </p>
         </div>
 
         <div class="flex-col flex w-full md:w-1/3">
-          <img
-            class="w-60 h-60 object-cover rounded-full  self-center"
+          <img class="w-60 h-60 object-cover rounded-full  self-center"
             src="https://images.unsplash.com/photo-1599487058320-2fbfcbfc6d75?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
-            alt="info-card"
-          />
+            alt="info-card" />
           <p class="text text-center mt-8">
-            Răsfață-ți echipa cu un loc la aer curat, lângă Inima Codrlior.
+            Răsfață-ți echipa cu un loc la aer curat, lângă Inima Codrilor.
           </p>
         </div>
       </div>
@@ -102,8 +101,8 @@
 
       <div class="heading mt-40">Portofoliul nostru de evenimente găzduite</div>
       <div class="flex w-full h-96 relative mb-12 mt-8">
-        <div class="z-50 px-2 py-4">
-          <p class="text-white heading mt-28 font-bold md:leading-tight">Aerobis Balloon Fiesta
+        <div class="z-50 px-2 grid content-center">
+          <p class="text-white heading font-bold md:leading-tight">Aerobis Balloon Fiesta
           </p>
         </div>
         <img class="absolute object-cover w-full h-full brightness-[60%]"
@@ -128,8 +127,8 @@
 
 
       <div class="flex w-full h-96 relative mb-12">
-        <div class="z-50 py-4 px-2">
-          <p class=" text-white mt-24 font-bold heading md:leading-tight">CUCUTENI INTERNATIONAL
+        <div class="z-50 py-4 grid content-center">
+          <p class=" text-white font-bold heading md:leading-tight">CUCUTENI INTERNATIONAL
             FESTIVAL</p>
         </div>
         <img class="absolute object-cover w-full h-full brightness-[60%]"
@@ -170,35 +169,37 @@
         Inima Codrilor -
       </div>
     </marquee>
-    <div class="bg-black h-56 w-full">
+    <div class="bg-black h-56 w-full text-white">
       <div class="responsive">
         <div class="flex flex-row justify-between py-8 px-4 ">
           <div class="flex flex-col md:text-start text-center w-full">
 
-            <div class="font-display text-white pb-2">
-              Inima Codrilor <sup class="text-white text-base">2023</sup>
+            <div class="font-display  pb-2">
+              Inima Codrilor <sup class=" text-base">2023</sup>
             </div>
-            <div class="text-white flex-col flex text-xl gap-1 md:w-72 w-full">
+            <div class=" flex-col flex text-xl gap-1 md:w-72 w-full">
               <a href="/contact.html">Contactează-ne</a>
               <a href="/despre-noi.html/#harta">Unde ne găsești?</a>
               <a href="/servicii.html">Servicii</a>
             </div>
           </div>
-          <div class="[&>*]:text-white text-lg md:block hidden">
-            <p>
-              Telefon Recepție:<br />
-            <p class="p-2 hover:scale-125 transition border-b-[3px] border-primary">+373 67
-              300 500</p>
-            </p>
-            <p>
-              Email: <br />
-            <p class="p-2 hover:scale-125 transition border-b-[3px] border-primary">inima.codrilor@gmail.com</p>
-            </p>
+          <div class="text-lg md:block hidden">
+            <div class="w-full border-b-[3px] border-primary">
+              <p>Telefon Recepție:</p>
+              <button onclick="callInima()" class="p-2 hover:scale-110 transition ">+373 67
+                300 500</button>
+            </div>
+            <div class="w-full border-b-[3px] border-primary">
+              <p>
+                Email: </p>
+              <button onclick="sendEmail()" class="p-2 hover:scale-110 transition">inima.codrilor@gmail.com</button>
+            </div>
           </div>
         </div>
       </div>
     </div>
   </footer>
+  <script>feather.replace()</script>
 </body>
 
 </html>

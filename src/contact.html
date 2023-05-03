@@ -7,6 +7,9 @@
   <script src="./js/eventListener.js"></script>
   <title>Inima Codrilor</title>
   <link rel="icon" href="./assets/logo.png">
+
+  <script src="https://unpkg.com/feather-icons"></script>
+
 </head>
 
 <body class="w-full font-text">
@@ -25,21 +28,23 @@
     </div>
     <div class="block md:hidden z-40 w-full">
       <div class="flex flex-row justify-end">
-        <a class="py-3 text-3xl font-display w-full text-center absolute">
+        <a class="py-2 text-3xl font-display w-full text-center absolute">
           Inima Codrilor
         </a>
-        <button id="hamburger-button" class="text-3xl py-3 px-4 cursor-pointer z-50">&#9776;</button>
+        <button id="hamburger-button" class="py-3 pt-4 px-4 cursor-pointer z-50"><i data-feather="menu">a</i></button>
       </div>
     </div>
-    <div id="mobile-menu" class="fixed h-screen w-full bg-white z-[60] border-primary hidden border-b-4">
-      <div class="flex w-full flex-col gap-4 text-center text-black ">
-        <div class="border-primary border-b-4 flex flex-row justify-end">
-          <a class="py-3 text-3xl font-display w-full text-center absolute">
+
+    <div id="mobile-menu" class="fixed h-screen top-0 w-full bg-white z-[60] border-black hidden border-b-4">
+      <div class="flex w-full flex-col gap-6 text-center text-black font-light">
+        <div class="flex flex-row justify-end font-normal">
+          <a class="py-2 text-3xl font-display w-full text-center absolute">
             Inima Codrilor
           </a>
-          <button id="hamburger-button" class="text-6xl px-3 cursor-pointer z-50">&times;</button>
+          <button id="hamburger-button" class="py-3 pt-4 px-3 cursor-pointer z-50"><i
+              data-feather="x">a</i></button>
         </div>
-        <a class="text-3xl text hover:text-primary mt-8" href="/#hello">Acasă</a>
+        <a class="text-3xl text hover:text-primary mt-36" href="./index.html#hello">Acasă</a>
         <a class="text-3xl text hover:text-primary" href="./servicii.html">Servicii</a>
         <a class="text-3xl text hover:text-primary" href="./despre-noi.html">Despre noi</a>
         <a class="text-3xl text hover:text-primary" href="./evenimente.html">Evenimente</a>
@@ -143,19 +148,21 @@
 
         </div>
 
-        <div class="bg-primary gap-4 flex flex-col md:w-1/2 text-lg w-full text-white py-4 [&>*]:border-white border-black border-y-4">
+        <div
+          class="bg-primary gap-4 flex flex-col md:w-1/2 text-lg w-full text-white py-4 [&>*]:border-white border-black border-y-4">
           <p class="text border-b-[3px] font-semibold">
             Telefon Recepție: <span class='text-sm font-normal'>(apasă pe număr)</span>
           </p>
 
           <a href="tel:+373 67300500" class="border-b-[3px] hover:text-black text">+373 67 300 500</a>
-         
+
 
 
           <p class="text border-b-[3px] font-semibold">
             Email:
           </p>
-          <a href="mailto:inima.codrilor@gmail.com" class="border-b-[3px] text hover:text-black">inima.codrilor@gmail.com</a>
+          <a href="mailto:inima.codrilor@gmail.com"
+            class="border-b-[3px] text hover:text-black">inima.codrilor@gmail.com</a>
 
         </div>
 
@@ -163,7 +170,8 @@
     </div>
     <div class="responsive my-12">
       <div class="bg-black text-white heading text-2xl py-4"><span class="font-bold">Anunț - </span> Nu activăm în
-       <span class="bg-primary p-1 text-black"> perioada rece</span> a anului. Contactează-ne pentru detalii</div>
+        <span class="bg-primary p-1 text-black"> perioada rece</span> a anului. Contactează-ne pentru detalii
+      </div>
     </div>
 
 
@@ -177,35 +185,37 @@
         Inima Codrilor -
       </div>
     </marquee>
-    <div class="bg-black h-56 w-full">
+    <div class="bg-black h-56 w-full text-white">
       <div class="responsive">
         <div class="flex flex-row justify-between py-8 px-4 ">
           <div class="flex flex-col md:text-start text-center w-full">
 
-            <div class="font-display text-white pb-2">
-              Inima Codrilor <sup class="text-white text-base">2023</sup>
+            <div class="font-display pb-2">
+              Inima Codrilor <sup class="text-base">2023</sup>
             </div>
-            <div class="text-white flex-col flex text-xl gap-1 md:w-72 w-full">
+            <div class=" flex-col flex text-xl gap-1 md:w-72 w-full">
               <a href="/contact.html">Contactează-ne</a>
               <a href="/despre-noi.html/#harta">Unde ne găsești?</a>
               <a href="/servicii.html">Servicii</a>
             </div>
           </div>
-          <div class="[&>*]:text-white text-lg md:block hidden">
-            <p>
-              Telefon Recepție:<br />
-            <p class="p-2 hover:scale-125 transition border-b-[3px] border-primary">+373 67
-              300 500</p>
-            </p>
-            <p>
-              Email: <br />
-            <p class="p-2 hover:scale-125 transition border-b-[3px] border-primary">inima.codrilor@gmail.com</p>
-            </p>
+          <div class="text-lg md:block hidden">
+            <div class="w-full border-b-[3px] border-primary">
+              <p>Telefon Recepție:</p>
+              <button onclick="callInima()" class="p-2 hover:scale-110 transition ">+373 67
+                300 500</button>
+            </div>
+            <div class="w-full border-b-[3px] border-primary">
+              <p>
+                Email: </p>
+              <button onclick="sendEmail()" class="p-2 hover:scale-110 transition">inima.codrilor@gmail.com</button>
+            </div>
           </div>
         </div>
       </div>
     </div>
   </footer>
+  <script>feather.replace()</script>
 </body>
 
 </html>

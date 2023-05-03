@@ -19,7 +19,7 @@ const cortina = new THREE.Mesh( geometry, material );
 cortina.position.z = -10
 cortina.rotation.z = Math.PI / 2
 
-for (let i = 0; i < 3; i++) {
+for (let i = 0; i < 4; i++) {
   loadSVG(`./assets/layer${i}.svg`, 12 + 8 * i, -0.75*i);
 }
 
@@ -41,11 +41,6 @@ scene.add(light);
 function animate() {
   requestAnimationFrame(animate);
   playScrollAnimations();
-  cameraMovement();
-  render();
-}
-
-function render() {
   renderer.render(scene, camera);
 }
 
@@ -87,13 +82,6 @@ animationScripts.push({
     camera.position.z = lerp(0, -50, scalePercent(10,60));
   },
 });
-
-function cameraMovement() {
-  //let z = -scrollPercent;
-  //camera.rotation.x = mouse.y / 24;
-  //camera.rotation.y = -mouse.x / 12;
-  //camera.position.z = z;
-}
 
 function onDocumentMouseMove(event) {
   event.preventDefault();

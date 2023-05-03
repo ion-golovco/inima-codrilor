@@ -15,7 +15,7 @@ const handleOnMove = e => {
   
   const percentage = (mouseDelta / maxDelta) * -100,
         nextPercentageUnconstrained = parseFloat(track.dataset.prevPercentage)+ percentage,
-        nextPercentage = Math.max(Math.min(nextPercentageUnconstrained, 0), -100);
+        nextPercentage = Math.max(Math.min(nextPercentageUnconstrained, 0), -50);
   
   track.dataset.percentage = nextPercentage;
   
@@ -65,37 +65,17 @@ gsap.fromTo(
    x:0
   },
   {
-    x:-150,
+    x:-200,
     scrollTrigger: {
       trigger: '#image-track',
       scrub: 1,
-      start: "top center-=100",
-      end: "top center+=100 ",
+      start: "top center",
+      end: "bottom center"
     },
+
   }
 );
 
-let avs = gsap.utils.toArray(".av"); 
-avs.forEach((av,i) => {
-  gsap.fromTo(
-    av,
-    {
-     x:-65*(i%2==0?-1:1),
-    },
-    {
-      x:-170*(i%2==0?-1:1),
-      
-      scrollTrigger: {
-        trigger: av,
-        scrub: 1,
-        start: "top center-=100",
-        end: "top center+=100 ",
-      },
-    }
-  );
-  
-});
-
 function helloButton(){
-  gsap.to(window, {duration: 3, scrollTo: "#hello", ease: "slow(0.1, 0.7, false)"});
+  gsap.to(window, {duration: 3, scrollTo: "#hello", ease: "slow(0.1, 0.8, false)"});
 }

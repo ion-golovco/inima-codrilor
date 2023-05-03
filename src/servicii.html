@@ -6,10 +6,11 @@
   <link rel="stylesheet" href="../output.css" />
   <script src="./js/eventListener.js"></script>
   <title>Inima Codrilor</title>
+
   <link rel="icon" href="./assets/logo.png">
-  <link rel="stylesheet" href="./js/libs/leaflet/leaflet.css" />
-  <script src="./js/libs/leaflet/leaflet.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+  <script src="https://unpkg.com/feather-icons"></script>
+
 </head>
 
 <body class="w-full font-text">
@@ -28,27 +29,30 @@
     </div>
     <div class="block md:hidden z-40 w-full">
       <div class="flex flex-row justify-end">
-        <a class="py-3 text-3xl font-display w-full text-center absolute">
+        <a class="py-2 text-3xl font-display w-full text-center absolute">
           Inima Codrilor
         </a>
-        <button id="hamburger-button" class="text-3xl py-3 px-4 cursor-pointer z-50">&#9776;</button>
+        <button id="hamburger-button" class="py-3 pt-4 px-4 cursor-pointer z-50"><i data-feather="menu">a</i></button>
       </div>
     </div>
-    <div id="mobile-menu" class="fixed h-screen w-full bg-white z-[60] border-primary hidden border-b-4">
-      <div class="flex w-full flex-col gap-4 text-center text-black ">
-        <div class="border-primary border-b-4 flex flex-row justify-end">
-          <a class="py-3 text-3xl font-display w-full text-center absolute">
+
+    <div id="mobile-menu" class="fixed h-screen top-0 w-full bg-white z-[60] border-black hidden border-b-4">
+      <div class="flex w-full flex-col gap-6 text-center text-black font-light">
+        <div class="flex flex-row justify-end font-normal">
+          <a class="py-2 text-3xl font-display w-full text-center absolute">
             Inima Codrilor
           </a>
-          <button id="hamburger-button" class="text-6xl px-3 cursor-pointer z-50">&times;</button>
+          <button id="hamburger-button" class="py-3 pt-4 px-3 cursor-pointer z-50"><i
+              data-feather="x">a</i></button>
         </div>
-        <a class="text-3xl text hover:text-primary mt-8" href="/#hello">Acasă</a>
+        <a class="text-3xl text hover:text-primary mt-36" href="./index.html#hello">Acasă</a>
         <a class="text-3xl text hover:text-primary" href="./servicii.html">Servicii</a>
         <a class="text-3xl text hover:text-primary" href="./despre-noi.html">Despre noi</a>
         <a class="text-3xl text hover:text-primary" href="./evenimente.html">Evenimente</a>
         <a class="text-3xl text hover:text-primary" href="./contact.html">Contacte</a>
       </div>
     </div>
+
   </header>
 
   <main class="overflow-hidden">
@@ -61,39 +65,26 @@
         </p>
         <p class="text mt-4 w-2/3">Îți oferim toate facilitățile pentru a te simți ca acasă</p>
       </div>
-      <img class="absolute object-cover w-full h-full brightness-[50%] saturate-[85%]" src="./assets/flori.jpg"
-        alt="Orheiul vechi">
+      <img class="absolute object-cover w-full h-full brightness-[50%] saturate-[85%]"
+        src="https://orheiulvechi.com/wp-content/uploads/2022/11/Schitul_Mascauti_Albu_2.jpg" alt="Orheiul vechi">
     </div>
 
-    <div class="flex relative text-white overflow-hidden bg-black">
-      <div class="w-full md:h-36 h-28 z-50">
-        <div class="text-center absolute w-full heading rotate-12 -top-24 -left-8">
-          <p class=" "> Servicii - Cazare - Săli - Restaurant - Inima Codrilor -<span class="text-primary"> Inima
-              Codrilor</span> - Servicii - Cazare - Săli <span class="text-primary">- Restaurant -</span> Servicii -
-            Cazare - Săli - Restaurant -Inima
-            Codrilor<span class="text-primary"> - Inima
-              Codrilor - </span> Servicii - Cazare - Săli - Restaurant - Inima Codrilor<span class="text-primary"> -
-              Inima
-              Codrilor - </span> -Inima Codrilor - Servicii - Cazare - Săli - Restaurant - Inima Codrilor
-          </p>
-        </div>
-      </div>
-    </div>
 
 
     <div class="responsive">
 
-      <div class="flex w-full md:h-[85vh] mt-12 md:flex-row flex-col-reverse" id="cazare">
-
+      <div class="flex w-full md:h-[85vh]  mt-12 md:flex-row flex-col-reverse" id="cazare">
         <div class="md:w-1/2 w-full h-full  overflow-hidden relative">
-
-          <div class="carousel flex flex-row w-full h-full">
-            <img class="object-cover h-full saturate-[125%]" src="./assets/single.jpg" alt="Orheiul vechi">
-            <img class="object-cover h-full saturate-[125%]" src="./assets/flori.jpg" alt="Orheiul vechi">
-            <img class="object-cover h-full saturate-[125%]" src="./assets/triple.jpg" alt="Orheiul vechi">
-            <img class="object-cover h-full saturate-[125%]" src="./assets/flori.jpg" alt="Orheiul vechi">
+          <div class="carousel flex flex-row md:h-[85vh] h-[50vh]">
+            <img class="object-cover w-full saturate-[80%]" src="https://ivancea.moldtelecom.md/images/DSC_6213.jpg"
+              alt="Orh">
+            <img class="object-cover w-full saturate-100 " src="https://ivancea.moldtelecom.md/images/DSC_0581.jpg"
+              alt="O">
+            <img class="object-cover w-full saturate-[125%]" src="./assets/duble.jpg" alt="Orheiul vechi">
+            <img class="object-cover w-full saturate-100" src="https://ivancea.moldtelecom.md/images/DSC_0586.jpg"
+              alt="Or">
+            <img class="object-cover w-full saturate-[125%]" src="./assets/apartament.jpg" alt="Orheiul vechi">
           </div>
-
         </div>
 
         <div class="w-full grid content-center md:px-8 md:w-1/2">
@@ -129,214 +120,292 @@
             </div>
           </div>
         </div>
+      </div>
+
+
+
+
+
+      <div class="flex w-full h-96 relative md:my-12 mt-24">
+        <div class="z-50 py-4 px-2 w-full">
+          <p class=" text-white heading mt-32 font-bold md:leading-tight">Opțiuni de Relaxare <br> și Activitate Fizică
+          </p>
+        </div>
+        <img class="absolute object-cover w-full h-full brightness-[80%] saturate-100"
+          src="https://ivancea.moldtelecom.md/images/Moldtelecom-18-Mai-2018_serjio.com_401.jpg" alt="Orheiul vechi">
+      </div>
+
+      <div class="flex flex-col md:flex-row justify-between">
+
+        <div id="recreatie" class="bg-back mb-12 w-full">
+          <div class="heading pt-4">TERENURI SPORTIVE</div>
+          <div class="text py-4">
+            Terenurile sportive sunt locul ideal pentru cei care doresc sa facă din mișcarea fizică o bucurie, o
+            necesitate,
+            dar și pentru cei care sunt la începutul unui drum de performanţă.
+          </div>
+        </div>
+
+        <div class="py-4 text mb-12 w-full justify-center font-medium">
+          <div class="grid content-center h-full">
+            <div class=" [&>*]:border-primary [&>*]:py-2 [&>*]:border-b-2 grid grid-cols-2 content-center">
+              <div>TEREN DE FOTBAL</div>
+              <div>- 600 MDL/ 12 ore</div>
+            </div>
+            <div class=" [&>*]:border-primary [&>*]:py-2 [&>*]:border-b-2 grid grid-cols-2 content-center">
+              <div>TEREN DE BASCHET</div>
+              <div>- 600 MDL/ 12 ore</div>
+            </div>
+            <div class=" [&>*]:border-primary [&>*]:py-2 [&>*]:border-b-2 grid grid-cols-2 content-center">
+              <div>TEREN DE VOLEI</div>
+              <div>- 600 MDL/ 12 ore</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+
+    <div class="flex relative text-white overflow-hidden bg-black">
+      <div class="w-full md:h-36 h-28 z-50">
+        <div class="text-center absolute w-full heading rotate-12 -top-24 -left-8">
+          <p class=" "> Servicii - Cazare - Săli - Restaurant - Inima Codrilor -<span class="text-primary"> Inima
+              Codrilor</span> - Servicii - Cazare - Săli <span class="text-primary">- Restaurant -</span> Servicii -
+            Cazare - Săli - Restaurant -Inima
+            Codrilor<span class="text-primary"> - Inima
+              Codrilor - </span> Servicii - Cazare - Săli - Restaurant - Inima Codrilor<span class="text-primary"> -
+              Inima
+              Codrilor - </span> -Inima Codrilor - Servicii - Cazare - Săli - Restaurant - Inima Codrilor
+          </p>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="responsive">
+
+      <div class="w-full">
+        <p class="heading w-full mt-12">
+          Facilități
+        </p>
+        <div
+          class="px-2 flex flex-wrap gap-2 md:px-0 [&>*]:h-28 [&>*]:md:h-36 [&>*]:w-[31%] [&>*]:md:w-40 mt-12 text-center [&>*]:bg-back text">
+          <div class="flex justify-center flex-col items-center">
+            <i data-feather="wifi"></i>
+            <p>Wi-fi</p>
+          </div>
+          <div class="flex justify-center flex-col items-center">
+            <i data-feather="map-pin"></i>
+            <p>Parcare</p>
+          </div>
+          <div class="flex justify-center flex-col items-center">
+            <i data-feather="sun"></i>
+            <p>Aer condiționat</p>
+          </div>
+          <div class="flex justify-center flex-col items-center">
+            <i data-feather="monitor"></i>
+            <p>TV</p>
+          </div>
+          <div class="flex justify-center flex-col items-center">
+            <i data-feather="coffee"></i>
+            <p>Bar / Restaurant</p>
+          </div>
+          <div class="flex justify-center flex-col items-center">
+            <i data-feather="square"></i>
+            <p>Teren de joacă</p>
+          </div>
+          <div class="flex justify-center flex-col items-center">
+            <i data-feather="edit-2"></i>
+            <p>Fumoar</p>
+          </div>
+          <div class="flex justify-center flex-col items-center">
+            <i data-feather="cloud-rain"></i>
+            <p>Cadă / Duș</p>
+          </div>
+          <div class="flex justify-center flex-col items-center">
+            <i data-feather="shopping-cart"></i>
+            <p>Frigider</p>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="flex flex-col md:flex-row justify-between mt-12">
+        <div class="bg-back w-full mb-12">
+          <div class="heading py-4">FOIŞOARE</div>
+          <div class="pb-4 text ">
+            Pe teritoriul complexului sunt situate de asemenea şi 7 foişoare cu o capacitate totală de 272 locuri unde
+            pot
+            fi desfăşurate cu succes evenimente profesionale sau de familie.
+            Foişoarele amenajate cu mese şi scaune mobile sunt amplasate în aer liber în formă de amfiteatru, cu o
+            privelişte panoramică deosebită a naturii unde puteţi comunica şi organiza diverse activităţi de agrement.
+          </div>
+        </div>
+
+        <div class="py-4 text mb-12 w-full justify-center font-medium">
+          <div class="grid content-center h-full">
+            <div class=" [&>*]:border-primary [&>*]:py-2 [&>*]:border-b-2 grid grid-cols-2 content-center">
+              <div>Până la 10 persoane</div>
+              <div>- 1000 MDL/ 12 ore</div>
+            </div>
+
+            <div class=" [&>*]:border-primary [&>*]:py-2 [&>*]:border-b-2 grid grid-cols-2 content-center">
+              <div>Preţul maxim al arendei</div>
+              <div>- 2200 MDL/ 12 ore</div>
+            </div>
+            <div class=" [&>*]:border-primary [&>*]:py-2 [&>*]:border-b-2 grid grid-cols-2 content-center">
+              <div>Mai mult de 10 persoane</div>
+              <div>+ 55 MDL per persoană</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+
+      <div class="flex w-full h-96 relative mb-12">
+        <div class="z-50 py-4 px-2 w-full">
+          <p class=" text-white heading mt-32 font-bold md:leading-tight">Spații pentru Întâlniri <br> și Evenimente de
+            Afaceri</p>
+        </div>
+        <img class="absolute object-cover w-full h-full brightness-[80%] saturate-100"
+          src="https://ivancea.moldtelecom.md/images/conference2(1).jpg" alt="Orheiul vechi">
+      </div>
+
+      <div id="spatii" class="bg-back w-full mb-12">
+        <div class="heading py-4">SĂLI DE CONFERINŢE</div>
+        <div class="pb-4 text">
+          Complexul este dotat şi cu 8 săli multifuncţionale care asemeni unui joc Lego se pot transforma şi adapta
+          celor
+          mai diverse cerinţe. Public mai numeros sau grupuri mai restrânse îşi pot găsi aici spaţiul ideal pentru
+          cursuri
+          de instruire, seminare şi evenimente unde pot interacţiona, comunica şi astfel atinge obiectivele propuse.
+        </div>
 
       </div>
 
-      <div class="flex w-full md:h-[85vh] md:flex-row flex-col-reverse">
-        <div class="w-full grid content-center md:px-8">
-          <p class="heading text-center">
-            Facilități
+
+      <div class=" py-4 mb-12  w-full">
+        <table
+          class="w-full md:text-xl font-medium border-white table-auto text-center [&_th]:py-2 [&_td]:py-1 [&_th]:border-b-2 [&_th]:border-black [&_td]:border-b-2">
+          <tr class="bg-black text-white">
+            <th>Denumirea sălilor</th>
+            <th>Nr. p/o</th>
+            <th>2-ore</th>
+            <th>3-ore</th>
+            <th>4-ore</th>
+            <th>9-ore</th>
+          </tr>
+          <tr>
+            <td>Sala de şedinţe «rotundă»</td>
+            <td>24</td>
+            <td>300</td>
+            <td>500</td>
+            <td>700</td>
+            <td>1100</td>
+          </tr>
+          <tr>
+            <td>Sala mare de şedinţe</td>
+            <td>84</td>
+            <td>700</td>
+            <td>1000</td>
+            <td>1800</td>
+            <td>2500</td>
+          </tr>
+          <tr>
+            <td>Sala de calculatoare</td>
+            <td>22</td>
+            <td>900</td>
+            <td>1300</td>
+            <td>2000</td>
+            <td>3200</td>
+          </tr>
+          <tr>
+            <td>Sala de studiu nr. 1</td>
+            <td>24</td>
+            <td>300</td>
+            <td>500</td>
+            <td>700</td>
+            <td>1100</td>
+          </tr>
+          <tr>
+            <td>Sala de studiu nr. 2</td>
+            <td>12</td>
+            <td>200</td>
+            <td>300</td>
+            <td>400</td>
+            <td>600</td>
+          </tr>
+          <tr>
+            <td>Sala de studiu nr. 3</td>
+            <td>12</td>
+            <td>200</td>
+            <td>300</td>
+            <td>400</td>
+            <td>600</td>
+          </tr>
+          <tr>
+            <td>Sala de studiu nr. 4</td>
+            <td>12</td>
+            <td>200</td>
+            <td>300</td>
+            <td>400</td>
+            <td>600</td>
+          </tr>
+          <tr>
+            <td>Sala de studiu nr. 5</td>
+            <td>12</td>
+            <td>200</td>
+            <td>300</td>
+            <td>400</td>
+            <td>600</td>
+          </tr>
+          <tr>
+            <td>Sala de studiu nr. 6</td>
+            <td>12</td>
+            <td>200</td>
+            <td>300</td>
+            <td>400</td>
+            <td>600</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+
+    <div class="mt-40 mb-12 md:mb-40 responsive">
+
+      <div class="flex flex-col md:flex-row gap-12 justify-between">
+        <div class="md:w-1/2 w-full">
+          <p class="heading mb-6">Hai să vorbim</p>
+          <p class="text">Pentru a lua legătura cu noi, puteți să ne găsiți pe pagina de Facebook sau să
+            sunați la unul dintre numerele noastre de telefon.</p>
+
+          <button class="text md:mx-4 mx-2 mt-8 text-center
+            font-bold border-black border-[3px] hover:bg-primary
+             rounded-2xl w-60 cursor-pointer py-1 transition
+            hover:scale-110"> <a href="/contact.html" class="py-1"> Rezervă acum</a>
+          </button>
+        </div>
+
+
+        <div class="bg-back gap-4 flex flex-col md:w-1/2 text-lg w-full py-4 [&>*]:border-white ">
+          <p class="text border-b-[3px] font-semibold">
+            </i>Telefon Recepție: <span class='text-sm font-normal'>(apasă pe număr)</span>
           </p>
 
-        </div>
-        <img class="object-cover md:w-1/2 w-full h-full saturate-100"
-          src="https://ivancea.moldtelecom.md/images/DSC_6213.jpg" alt="Orheiul vechi">
-      </div>
-
-    </div>
-
-    <div class="flex flex-wrap gap-2 [&>*]:h-36 [&>*]:w-40 mt-8 [&>*]:p-2 text-center [&>*]:bg-black text-white text">
-      <div>Wi-fi</div>
-      <div>Parcare</div>
-      <div>Aer condiţionat</div>
-      <div>TV</div>
-      <div>Bar / restaurant</div>
-      <div>Parc pentru copii</div>
-      <div>BBQ</div>
-      <div>Fumoar</div>
-      <div>Cadă / Duș</div>
-    </div>
+          <a href="tel:+373 67300500" class="border-b-[3px] hover:text-primary text">+373 67 300 500</a>
 
 
-
-
-
-
-
-    <div class="flex w-full h-96 relative my-12">
-      <div class="z-50 py-4 px-2 w-full">
-        <p class=" text-white heading mt-32 font-bold md:leading-tight">Opțiuni de Relaxare <br> și Activitate Fizică
-        </p>
-      </div>
-      <img class="absolute object-cover w-full h-full brightness-[60%]"
-        src="https://ivancea.moldtelecom.md/images/foisor.jpg" alt="Orheiul vechi">
-    </div>
-
-    <div class="flex flex-col md:flex-row justify-between">
-
-      <div id="recreatie" class="bg-red mb-12 w-full">
-        <div class="text-white heading pt-4">TERENURI SPORTIVE</div>
-        <div class=" text-white text py-4">
-          Terenurile sportive sunt locul ideal pentru cei care doresc sa facă din mișcarea fizică o bucurie, o
-          necesitate,
-          dar și pentru cei care sunt la începutul unui drum de performanţă.
+          <p class="text border-b-[3px] font-semibold">
+            Email:
+          </p>
+          <a href="mailto:inima.codrilor@gmail.com"
+            class="border-b-[3px] text hover:text-primary">inima.codrilor@gmail.com</a>
         </div>
       </div>
-
-      <div class="py-4 text mb-12 w-full justify-center font-medium">
-        <div class="grid content-center h-full">
-          <div class=" [&>*]:border-red [&>*]:py-2 [&>*]:border-b-2 grid grid-cols-2 content-center">
-            <div>TEREN DE FOTBAL</div>
-            <div>- 600 MDL/ 12 ore</div>
-          </div>
-          <div class=" [&>*]:border-red [&>*]:py-2 [&>*]:border-b-2 grid grid-cols-2 content-center">
-            <div>TEREN DE BASCHET</div>
-            <div>- 600 MDL/ 12 ore</div>
-          </div>
-          <div class=" [&>*]:border-red [&>*]:py-2 [&>*]:border-b-2 grid grid-cols-2 content-center">
-            <div>TEREN DE VOLEI</div>
-            <div>- 600 MDL/ 12 ore</div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-
-
-    <div class="flex flex-col md:flex-row justify-between">
-      <div class="bg-red w-full mb-12 text-white">
-        <div class="heading py-4">FOIŞOARE</div>
-        <div class="pb-4 text ">
-          Pe teritoriul complexului sunt situate de asemenea şi 7 foişoare cu o capacitate totală de 272 locuri unde pot
-          fi desfăşurate cu succes evenimente profesionale sau de familie.
-          Foişoarele amenajate cu mese şi scaune mobile sunt amplasate în aer liber în formă de amfiteatru, cu o
-          privelişte panoramică deosebită a naturii unde puteţi comunica şi organiza diverse activităţi de agrement.
-        </div>
-      </div>
-
-      <div class="py-4 text mb-12 w-full justify-center font-medium">
-        <div class="grid content-center h-full">
-          <div class=" [&>*]:border-red [&>*]:py-2 [&>*]:border-b-2 grid grid-cols-2 content-center">
-            <div>Până la 10 persoane</div>
-            <div>- 1000 MDL/ 12 ore</div>
-          </div>
-
-          <div class=" [&>*]:border-red [&>*]:py-2 [&>*]:border-b-2 grid grid-cols-2 content-center">
-            <div>Preţul maxim al arendei</div>
-            <div>- 2200 MDL/ 12 ore</div>
-          </div>
-          <div class=" [&>*]:border-red [&>*]:py-2 [&>*]:border-b-2 grid grid-cols-2 content-center">
-            <div>Mai mult de 10 persoane</div>
-            <div>+ 55 MDL per persoană</div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="flex w-full h-96 relative mb-12">
-      <div class="z-50 py-4 px-2 w-full">
-        <p class=" text-white heading mt-32 font-bold md:leading-tight">Spații pentru Întâlniri <br> și Evenimente de
-          Afaceri</p>
-      </div>
-      <img class="absolute object-cover w-full h-full brightness-[60%]"
-        src="https://ivancea.moldtelecom.md/images/conference2(1).jpg" alt="Orheiul vechi">
-    </div>
-
-    <div id="spatii" class="bg-primary text-white w-full mb-12">
-      <div class="heading py-4">SĂLI DE CONFERINŢE</div>
-      <div class="pb-4 text">
-        Complexul este dotat şi cu 8 săli multifuncţionale care asemeni unui joc Lego se pot transforma şi adapta celor
-        mai diverse cerinţe. Public mai numeros sau grupuri mai restrânse îşi pot găsi aici spaţiul ideal pentru cursuri
-        de instruire, seminare şi evenimente unde pot interacţiona, comunica şi astfel atinge obiectivele propuse.
-      </div>
-
-    </div>
-
-
-    <div class="bg-primary py-4 md:px-8 mb-12 text-white w-full">
-      <table
-        class="w-full md:text-xl font-medium border-white table-auto text-center [&_th]:py-2 [&_td]:py-1 [&_th]:border-b-2 [&_td]:border-b-2">
-        <tr class="bg-white text-primary">
-          <th>Denumirea sălilor</th>
-          <th>Nr. p/o</th>
-          <th>2-ore</th>
-          <th>3-ore</th>
-          <th>4-ore</th>
-          <th>9-ore</th>
-        </tr>
-        <tr>
-          <td>Sala de şedinţe «rotundă»</td>
-          <td>24</td>
-          <td>300</td>
-          <td>500</td>
-          <td>700</td>
-          <td>1100</td>
-        </tr>
-        <tr>
-          <td>Sala mare de şedinţe</td>
-          <td>84</td>
-          <td>700</td>
-          <td>1000</td>
-          <td>1800</td>
-          <td>2500</td>
-        </tr>
-        <tr>
-          <td>Sala de calculatoare</td>
-          <td>22</td>
-          <td>900</td>
-          <td>1300</td>
-          <td>2000</td>
-          <td>3200</td>
-        </tr>
-        <tr>
-          <td>Sala de studiu nr. 1</td>
-          <td>24</td>
-          <td>300</td>
-          <td>500</td>
-          <td>700</td>
-          <td>1100</td>
-        </tr>
-        <tr>
-          <td>Sala de studiu nr. 2</td>
-          <td>12</td>
-          <td>200</td>
-          <td>300</td>
-          <td>400</td>
-          <td>600</td>
-        </tr>
-        <tr>
-          <td>Sala de studiu nr. 3</td>
-          <td>12</td>
-          <td>200</td>
-          <td>300</td>
-          <td>400</td>
-          <td>600</td>
-        </tr>
-        <tr>
-          <td>Sala de studiu nr. 4</td>
-          <td>12</td>
-          <td>200</td>
-          <td>300</td>
-          <td>400</td>
-          <td>600</td>
-        </tr>
-        <tr>
-          <td>Sala de studiu nr. 5</td>
-          <td>12</td>
-          <td>200</td>
-          <td>300</td>
-          <td>400</td>
-          <td>600</td>
-        </tr>
-        <tr>
-          <td>Sala de studiu nr. 6</td>
-          <td>12</td>
-          <td>200</td>
-          <td>300</td>
-          <td>400</td>
-          <td>600</td>
-        </tr>
-      </table>
     </div>
 
   </main>
@@ -348,41 +417,39 @@
         Inima Codrilor -
       </div>
     </marquee>
-    <div class="bg-black h-56 w-full">
+    <div class="bg-black h-56 w-full text-white">
       <div class="responsive">
         <div class="flex flex-row justify-between py-8 px-4 ">
           <div class="flex flex-col md:text-start text-center w-full">
 
-            <div class="font-display text-white pb-2">
-              Inima Codrilor <sup class="text-white text-base">2023</sup>
+            <div class="font-display  pb-2">
+              Inima Codrilor <sup class=" text-base">2023</sup>
             </div>
-            <div class="text-white flex-col flex text-xl gap-1 md:w-72 w-full">
+            <div class=" flex-col flex text-xl gap-1 md:w-72 w-full">
               <a href="/contact.html">Contactează-ne</a>
               <a href="/despre-noi.html/#harta">Unde ne găsești?</a>
               <a href="/servicii.html">Servicii</a>
             </div>
           </div>
-          <div class="[&>*]:text-white text-lg md:block hidden">
-            <p>
-              Telefon Recepție:<br />
-            <p class="p-2 hover:scale-125 transition border-b-[3px] border-primary">+373 67
-              300 500</p>
-            </p>
-            <p>
-              Email: <br />
-            <p class="p-2 hover:scale-125 transition border-b-[3px] border-primary">inima.codrilor@gmail.com</p>
-            </p>
+          <div class="text-lg md:block hidden">
+            <div class="w-full border-b-[3px] border-primary">
+              <p>Telefon Recepție:</p>
+              <button onclick="callInima()" class="p-2 hover:scale-110 transition ">+373 67
+                300 500</button>
+            </div>
+            <div class="w-full border-b-[3px] border-primary">
+              <p>
+                Email: </p>
+              <button onclick="sendEmail()" class="p-2 hover:scale-110 transition">inima.codrilor@gmail.com</button>
+            </div>
           </div>
         </div>
       </div>
     </div>
   </footer>
+  <script>feather.replace()</script>
 </body>
-<script>var mymap = L.map('map').setView([51.505, -0.09], 13);
 
-  L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
-    attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
-  }).addTo(mymap);</script>
 <script src="./js/servicii.js"></script>
 
 </html>
