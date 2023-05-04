@@ -2,6 +2,7 @@ import * as THREE from "./libs/three.js";
 import { SVGLoader } from "./libs/SVGloader.js";
 import { scene } from "./Scene.js";
 
+//loadSVG redesenează toate path-urile și fill-urile a svg-urilor și sunt poziționate pe canvas
 function loadSVG(url, z, y) {
   const scale = 0.03;
   const loader = new SVGLoader();
@@ -51,6 +52,9 @@ function loadSVG(url, z, y) {
         }
       }
     }
+
+    //Înmulțim scale predefinit mai sus cu jumate din mărimea la viewbox al svg-urilor 
+    //pentru a se afla la centru ecranului + un offset y
     group.position.x = -683 * scale;
     group.position.y = 384 * scale + y;
     group.position.z = -z;

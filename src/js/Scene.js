@@ -1,20 +1,20 @@
 import * as THREE from "./libs/three.js";
-
 import loadSVG from "./LoadSVG.js";
 
+//setup la canvas
 export const scene = new THREE.Scene();
 const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
-
+//adăugam antialias pentru un look mai clean
 const renderer = new THREE.WebGLRenderer({ antialias: true });
-let mouse = new THREE.Vector2();
 
 let animationScripts = [];
 let scrollPercent = 0;
 
-const colors = [new THREE.Color(0xE9F2DC), new THREE.Color(0xffe799)];
+const colors = [new THREE.Color(0xE9F2DC), new THREE.Color(0x98C05E)];
 
+//creăm cortina pe care stă textul principal de pe canvas
 let geometry = new THREE.PlaneGeometry( 250, 250 );
-let material = new THREE.MeshBasicMaterial( {color: 0x98C05E, transparent:true} );
+let material = new THREE.MeshBasicMaterial( {color: colors[1], transparent:true} );
 const cortina = new THREE.Mesh( geometry, material );
 cortina.position.z = -10
 cortina.rotation.z = Math.PI / 2
@@ -32,7 +32,6 @@ function initial() {
   renderer.setSize(window.innerWidth, window.innerHeight);
   document.body.appendChild(renderer.domElement);
   window.addEventListener("resize", onWindowResize);
-  document.addEventListener("mousemove", onDocumentMouseMove, false);
 }
 
 const light = new THREE.AmbientLight(0xffffff);
@@ -43,7 +42,6 @@ function animate() {
   playScrollAnimations();
   renderer.render(scene, camera);
 }
-
 animate();
 
 function lerp(x, y, a) {
@@ -82,12 +80,6 @@ animationScripts.push({
     camera.position.z = lerp(0, -50, scalePercent(10,60));
   },
 });
-
-function onDocumentMouseMove(event) {
-  event.preventDefault();
-  mouse.x = (event.clientX / window.innerWidth) * 2 - 1;
-  mouse.y = -(event.clientY / window.innerHeight) * 2 + 1;
-}
 
 const resizeUpdateInterval = 300;
 let timesRezized = 0
